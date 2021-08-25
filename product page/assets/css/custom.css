@@ -1,0 +1,59 @@
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+.thumbnail:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.thumbnail-image {
+  max-width: 134px;
+}
+
+.thumbnail-full {
+  max-width: 520px;
+}
+
+.icon {
+  max-height: 25px;
+}
+
+.p-title {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.p-value {
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.b-round {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+}
+
+.b-round:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.select-control {
+  width: 80px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+.container-plus {
+  height: 70px;
+}

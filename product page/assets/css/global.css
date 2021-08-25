@@ -1,0 +1,32 @@
+/*BOOTSTRAP*/
+.container {
+  max-width: 90% !important;
+}
+
+.h1 {
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+}
+
+.btn {
+  font-weight: 400;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: #545454;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 10px;
+}
+
+/*PROJETO*/
+.margem-t50 {
+  margin-top: 50px;
+}
+.margem-t100 {
+  margin-top: 100px;
+}
