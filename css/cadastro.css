@@ -1,0 +1,27 @@
+
+       .container{
+         width: 98%;
+         padding-left: ;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+       }
+       .form-check{
+         margin-left: 10px;
+         width: 97%;
+       }
+       .btn{
+         position: relative;
+         position: ;
+         right: 15px;
+         top: 15px;
+        
+       }
+       .finalizar-cadastro button{
+         width: 99%;
+         position: relative;
+         left: 4px;
+       }
+       .container{
+         width: 100%;
+       }
