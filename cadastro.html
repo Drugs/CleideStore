@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+     <style>
+  
+       .container{
+         width: 98%;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+       }
+       .form-check{
+         margin-left: 10px;
+         width: 97%;
+       }
+       .btn{
+         position: relative;
+ 
+         right: 15px;
+         top: 15px;
+        
+       }
+      .finalizar-cadastro button{
+        width: 99%;
+        position: relative;
+        left: 4px;
+      }
+      .container{
+        width: 100%;
+      }
+     </style>
+  </head>
+  <body>
+    
+        <div class="text-end">
+          <button type="button" class="btn btn-warning">Login</button>
+        </div>
+      
+     <div class="container">
+       <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Cadastre-se</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">CPF</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+              CPF Está errado.</div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Nome completo</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+               Nome incorreto.</div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Nome de usuário</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+              <div class="invalid-feedback">
+                  Nome de usuário já existe.</div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(Principal)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="">
+              <div class="invalid-feedback">
+                Por favor, insira um endereço de e-mail válido para atualizações de envio.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address"  class="form-label">Senha (No mínimo 8 caracteres)  </label>
+              <input type="password" class="form-control" id="address" placeholder="" required>
+              <div class="invalid-feedback">
+                Por favor tente outra senha.
+              </div>
+            </div>
+               <div class="col-12">
+              <label for="address" class="form-label">Confirma sua senha</label>
+              <input type="password" class="form-control" id="address" placeholder="" required>
+              <div class="invalid-feedback">
+                Senha incorreta, por favor tente a senha de acordo com a senha definida. 
+              </div>
+            </div>
+            
+            
+                <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">Aceita o compartilhamento de dados com parceiros para ofertas de produtos e benefícios financeiros.</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Aceito os <a href="#">Termos de condições</a> e autorizo o uso de meus dados de acordo com a <a href="#">Declaração de privacidade.</a></label>
+          </div>
+     
+        <div class="finalizar-cadastro">
+           <button type="button" class="btn btn-warning">Finalizar o cadastro</button>
+        </div>
+        
+              <!--RODA PÉ, FOOTER-->
+      <div class="container">
+       <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Página inicial</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Promoções</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Laçamentos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Fale conosco</a></li>
+        </ul>
+         <p class="text-center text-muted"> Todos os direitos reservados para CleideStore&copy;</p>
+         
+        
+     </footer>
+     </div>
+    </div>
+     
+  </body>
+</html>
