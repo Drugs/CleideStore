@@ -1,16 +1,28 @@
 /* CSS PARA ELEMENTOS PADRONIZADOS DO PROJETO - Mesmo h1 pra todas paginas por exemplo*/
 
-/*BOOTSTRAP*/
+/* ==== VARIAVEIS DE CORES ==== */
+
+:root {
+  /* 
+    == Exemplo de como declarar e usar essas variaveis == 
+  --nome-cor: #ccc;  --> declarando o nome da variavel e sua cor
+  background-color: var(--nome-cor);  --> usando a variavel no background (pode usar em qualquer lugar que pede cor)
+  */
+}
+
+/* ==== BOOTSTRAP ==== */
 .container {
   max-width: 90% !important;
 }
 
+/*Titulos*/
 .h1 {
   font-size: 36px !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
 }
 
+/*Botoes*/
 .btn {
   font-weight: 400;
   height: 60px;
@@ -25,10 +37,26 @@
   border-radius: 10px;
 }
 
-/*PROJETO*/
+/* ==== CRIADAS ==== */
+
 .margem-t50 {
+  /*Margem top curta*/
   margin-top: 50px;
 }
 .margem-t100 {
+  /*Margem top media*/
   margin-top: 100px;
+}
+
+.shadow-clear {
+  /* Sombra mais leve*/
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.shadow-medium {
+  /* Sombra media*/
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.shadow-dark {
+  /* Sombra mais escura*/
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 }

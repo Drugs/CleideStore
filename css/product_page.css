@@ -43,10 +43,6 @@ body {
   border: 2px solid #000;
 }
 
-.b-round:not(:last-of-type) {
-  margin-right: 20px;
-}
-
 .select-control {
   width: 80px;
   padding: 0.5rem 1rem;
@@ -60,4 +56,9 @@ body {
 
 .container-plus {
   height: 70px;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 800px) {
 }
