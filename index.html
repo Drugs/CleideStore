@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Carousel Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="./css/boootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <link href="../CleideStore/css/headers.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../CleideStore/css/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="bootstrap" viewBox="0 0 118 94">
+        <title>Bootstrap</title>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+      </symbol>
+      <symbol id="home" viewBox="0 0 16 16">
+        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+      </symbol>
+      <symbol id="speedometer2" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+        <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+      </symbol>
+      <symbol id="table" viewBox="0 0 16 16">
+        <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+      </symbol>
+      <symbol id="people-circle" viewBox="0 0 16 16">
+        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+      </symbol>
+      <symbol id="grid" >
+        <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+      </symbol >
+      <symbol id="cart" viewBox="0 0 16 16">
+      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      <symbol id="logo" viewBox= "0 0 85 82">
+       <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0, 0, 0);fill-opacity:1;" d="M 21.5 32.71875 C 21.402344 32.886719 21.144531 32.980469 20.398438 33.074219 C 19.855469 33.160156 19.160156 33.21875 18.828125 33.21875 C 17.886719 33.21875 17.886719 33.242188 17.917969 34.890625 C 17.957031 36.421875 18.003906 36.597656 18.570312 37.238281 C 19.207031 37.988281 19.714844 39.253906 19.914062 40.597656 C 20.011719 41.273438 20.140625 41.984375 20.199219 42.1875 C 20.257812 42.386719 20.308594 42.660156 20.308594 42.800781 C 20.308594 42.933594 20.363281 43.089844 20.421875 43.121094 C 20.492188 43.160156 20.542969 43.3125 20.542969 43.457031 C 20.542969 43.597656 20.625 43.824219 20.71875 43.941406 C 20.8125 44.074219 20.894531 44.273438 20.894531 44.394531 C 20.894531 44.511719 20.945312 44.699219 21 44.820312 C 21.0625 44.925781 21.226562 45.285156 21.371094 45.613281 C 21.863281 46.765625 21.980469 46.957031 22.394531 47.453125 C 23.019531 48.191406 24.15625 48.675781 26.152344 49.066406 C 27.035156 49.246094 27.875 49.28125 31.109375 49.28125 L 35.003906 49.292969 L 35.769531 48.734375 C 37.753906 47.3125 39.03125 45.519531 40.210938 42.480469 C 40.753906 41.105469 41.132812 40.300781 41.355469 40.074219 C 41.671875 39.765625 41.757812 39.742188 42.664062 39.742188 C 43.988281 39.742188 44.140625 39.871094 44.746094 41.464844 C 44.789062 41.59375 44.921875 41.9375 45.035156 42.234375 C 45.15625 42.53125 45.285156 42.875 45.320312 43.003906 C 45.367188 43.136719 45.558594 43.539062 45.722656 43.894531 C 45.898438 44.25 46.042969 44.59375 46.042969 44.644531 C 46.042969 44.699219 46.40625 45.257812 46.855469 45.886719 C 47.71875 47.109375 48.496094 47.917969 49.640625 48.769531 L 50.347656 49.292969 L 54.1875 49.292969 C 58.824219 49.28125 59.972656 49.128906 61.800781 48.273438 C 63.171875 47.632812 63.628906 46.886719 64.871094 43.265625 C 65.214844 42.257812 65.285156 41.890625 65.222656 41.519531 C 65.167969 41.191406 65.238281 40.75 65.464844 39.96875 C 65.828125 38.664062 66.15625 37.988281 66.816406 37.144531 C 67.269531 36.574219 67.316406 36.445312 67.410156 35.554688 C 67.46875 35.019531 67.550781 34.417969 67.589844 34.226562 C 67.644531 33.953125 67.597656 33.785156 67.433594 33.574219 C 67.21875 33.3125 67.089844 33.289062 65.804688 33.207031 C 64.160156 33.097656 63.902344 33.039062 63.796875 32.71875 C 63.738281 32.519531 63.644531 32.496094 62.6875 32.542969 C 61.921875 32.578125 61.589844 32.636719 61.449219 32.777344 C 61.1875 33.050781 60.375 33.050781 60.230469 32.777344 C 60.125 32.613281 59.910156 32.601562 58.1875 32.671875 C 54.597656 32.816406 51.828125 33.050781 50.292969 33.347656 C 49.9375 33.40625 49.347656 33.527344 48.996094 33.597656 C 47.957031 33.800781 46.539062 34.273438 45.675781 34.714844 L 44.859375 35.113281 L 40.46875 35.113281 L 39.679688 34.699219 C 37.71875 33.679688 34.636719 33.097656 29.21875 32.742188 C 26.515625 32.578125 25.523438 32.589844 25.3125 32.800781 C 25.050781 33.050781 24.402344 33.027344 24.050781 32.742188 C 23.800781 32.542969 23.574219 32.503906 22.679688 32.503906 C 21.769531 32.503906 21.59375 32.542969 21.5 32.71875 Z M 21.5 32.71875 "/>
+      <path style=" stroke:none;fill-rule:nonzero;fill:rgb(0, 0, 0);fill-opacity:1;" d="M 41.203125 47.5 C 39.988281 47.941406 39.300781 48.390625 38.902344 49.019531 C 38.710938 49.328125 38.710938 49.375 38.886719 49.648438 C 38.992188 49.800781 39.679688 50.550781 40.421875 51.296875 C 41.164062 52.035156 41.863281 52.816406 41.96875 53.027344 C 42.265625 53.597656 42.121094 54.15625 41.636719 54.382812 C 40.316406 54.972656 39.03125 54.523438 38.851562 53.410156 C 38.792969 53.042969 38.734375 52.972656 38.484375 52.972656 C 38.085938 52.972656 37.839844 53.445312 37.945312 54.027344 C 38.203125 55.4375 40.503906 56.246094 42.027344 55.460938 C 42.75 55.09375 42.910156 55.09375 43.503906 55.460938 C 44.238281 55.910156 45.390625 55.863281 46.453125 55.320312 C 47.175781 54.964844 47.753906 53.707031 47.457031 53.148438 C 47.210938 52.683594 46.628906 52.933594 46.628906 53.503906 C 46.628906 53.707031 46.476562 53.957031 46.21875 54.214844 C 45.832031 54.597656 45.757812 54.621094 44.992188 54.605469 C 43.820312 54.582031 43.441406 54.359375 43.441406 53.644531 C 43.441406 53.042969 43.707031 52.652344 45.226562 51.058594 C 46.207031 50.015625 46.628906 49.496094 46.628906 49.292969 C 46.628906 48.949219 45.792969 48.175781 45.003906 47.808594 C 43.597656 47.144531 42.464844 47.050781 41.203125 47.5 Z M 41.203125 47.5 "/>  
+     
+    </svg>
+    
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+         <img src="./images/logo.svg" alt="logo">
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 text-secondary">Página inicial</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Lançamentos</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">Promoções</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">FAQ</a></li>
+        
+          </ul>
+  
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control form-control-dark" placeholder="Busca..." aria-label="Busca">
+          </form>
+  
+          <div class="text-end">
+            <button type="button" class="btn btn-outline-light me-2">Login</button>
+            <button type="button" class="btn btn-warning id=botonh">Carrinho</button>
+          </div>
+        </div>
+      </div>
+    </header>
+  
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img id=ban1 src="./images/banners/1.jpg" alt="">
+
+        <div class="container">
+         
+          <div class="carousel-caption text-start">
+           
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/banners/2.jpg" alt="">
+        <div class="container">
+          <div class="carousel-caption">
+          
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src=".//images/banners/outro.jpg" alt="">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <h2 id=title1> Mais vendidos</h2>
+      </br>
+      </br>
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="./images/img_produtos/img3.jpg" alt="">
+
+        <h2>Camisa Tropical Branca</h2>
+        <p>Camisa tropical branca 100% algodão</p>
+        <p><a class="btn btn-secondary" href="#">Ver mais &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="./images/img_produtos/img1.jfif" alt="">
+        <h2>Camisa  Tropical Colorida </h2>
+        <p>Camisa tropical colorida 100% algodão</p>
+        <p><a class="btn btn-secondary" href="#">Veja mais &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+      <img src="./images/img_produtos/img2.jpg" alt="">
+
+        <h2>Camisa Tropical azul</h2>
+        <p>Camisa tropical azul 100% algodão</p>
+        <p><a class="btn btn-secondary" href="#">Veja mais &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="./images/img_produtos/img4.jpg" alt="">
+        <h2>Camisa Social Branca</h2>
+        <p>Camisa social branca 100% algodão</p>
+        <p><a class="btn btn-secondary" href="#">Veja mais &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+      <img src="./images/img_produtos/img52.jpg" alt="">
+
+        <h2>Camisa Social Azul</h2>
+        <p>Camisa social azul 100% algodão</p>
+        <p><a class="btn btn-secondary" href="#">Veja mais &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="./images/img_produtos/img61.jpg" alt="">
+  
+          <h2>Camisa Social do Naruto</h2>
+          <p>Camisa social do naruto 100% algodão</p>
+          <p><a class="btn btn-secondary" href="#">Veja mais &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+	
+    <h2>Ofertas da semana</h2>
+	<div class="row">
+      <div class="col-lg-4 border rounded overflow-hidden mb-4 shadow-sm">
+        <div class="col-auto d-flex flex-column position-static">
+        
+        </div>
+        <div class="col-auto d-none d-lg-block">
+         <img id="kits" class=bannermin src="./images/banners/kit1.png" alt="">
+         
+
+        </div>
+      </div>
+      
+      <div class="col-lg-4 border rounded overflow-hidden mb-4 shadow-sm">
+        <div class="col-auto d-flex flex-column position-static">
+        
+        </div>
+        <div class="col-auto d-none d-lg-block">
+         <img id=kits class=bannermin src="./images/banners/kit2.png" alt="">
+         
+
+        </div>
+      </div>
+
+       
+      <div class="col-lg-4 border rounded overflow-hidden mb-4 shadow-sm">
+        <div class="col-auto d-flex flex-column position-static">
+        
+        
+        </div>
+        <div class="col-auto d-none d-lg-block">
+         <img id=kits class=bannermin src="./images/banners/kit3.png" alt="">
+          
+
+        </div>
+      </div>
+      
+         <div class="col-lg-4 border rounded overflow-hidden mb-4 shadow-sm">
+        <div class="col-auto d-flex flex-column position-static">
+        
+        </div>
+        <div class="col-auto d-none d-lg-block">
+         <img id=kits class=bannermin src="./images/banners/kit4.png" alt="">
+
+
+        </div>
+      </div>
+
+      
+      <div class="col-lg-4 border rounded overflow-hidden mb-4 shadow-sm">
+        <div class="col-auto d-flex flex-column position-static">
+        
+        </div>
+        <div class="col-auto d-none d-lg-block">
+         <img id=kits class=bannermin src="./images/banners/kit5.png" alt="">
+
+
+        </div>
+      </div>
+
+      
+      <div class="col-lg-4 border rounded overflow-hidden mb-4 shadow-sm">
+        <div class="col-auto d-flex flex-column position-static">
+        
+        </div>
+        <div class="col-auto d-none d-lg-block">
+         <img id=kits class=bannermin src="./images/banners/kit6.png" alt="">
+
+
+        </div>
+      </div>
+    </div>
+    
+
+          <h2 id="title3">Produtos mais amados na papapa store</h2>
+          <div class="row">
+            
+          
+            <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+              <div class="col-auto d-flex flex-column position-static">
+              
+              </div>
+          <div  class="col-auto d-none d-lg-block">
+          <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+         <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+         <h6 id=precprod>R$ 79,90 </h6>
+         <p id=letp>em até 4 vezes de 19,97</p>
+         
+         
+           </div>
+          </div>
+            
+          <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+            <div class="col-auto d-flex flex-column position-static">
+            
+            </div>
+        <div   class="col-auto d-none d-lg-block">
+        <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+       <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+       <h6 id=precprod>R$ 79,90 </h6>
+       <p id=letp>em até 4 vezes de 19,97</p>
+        
+       
+         </div>
+        </div>
+
+          
+        <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+          <div class="col-auto d-flex flex-column position-static">
+          
+          </div>
+      <div   class="col-auto d-none d-lg-block">
+      <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+     <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+     <h6 id=precprod>R$ 79,90 </h6>
+     <p id=letp>em até 4 vezes de 19,97</p>
+      
+     </div>
+       </div>
+
+         
+       <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+        <div class="col-auto d-flex flex-column position-static">
+        
+        </div>
+    <div   class="col-auto d-none d-lg-block">
+    <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+   <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+   <h6 id=precprod>R$ 79,90 </h6>
+   <p id=letp>em até 4 vezes de 19,97</p>
+    
+  </div>
+     </div>
+
+       
+          <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+            <div class="col-auto d-flex flex-column position-static">
+            
+            </div>
+        <div   class="col-auto d-none d-lg-block">
+        <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+       <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+       <h6 id=precprod>R$ 79,90 </h6>
+       <p id=letp>em até 4 vezes de 19,97</p>
+        
+       
+         </div>
+          </div>
+          <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+            <div class="col-auto d-flex flex-column position-static">
+            
+            </div>
+        <div   class="col-auto d-none d-lg-block">
+        <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+       <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+       <h6 id=precprod>R$ 79,90 </h6>
+       <p id=letp>em até 4 vezes de 19,97</p>
+        
+       
+       
+         </div>
+          </div>
+
+          
+          <h2 id="title3">Produtos mais amados na papapa store</h2>
+          <div class="row">
+            
+          
+            <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+              <div class="col-auto d-flex flex-column position-static">
+              
+              </div>
+          <div  class="col-auto d-none d-lg-block">
+          <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+         <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+         <h6 id=precprod>R$ 79,90 </h6>
+         <p id=letp>em até 4 vezes de 19,97</p>
+         
+         
+           </div>
+          </div>
+            
+          <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+            <div class="col-auto d-flex flex-column position-static">
+            
+            </div>
+        <div   class="col-auto d-none d-lg-block">
+        <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+       <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+       <h6 id=precprod>R$ 79,90 </h6>
+       <p id=letp>em até 4 vezes de 19,97</p>
+        
+       
+         </div>
+        </div>
+
+          
+        <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+          <div class="col-auto d-flex flex-column position-static">
+          
+          </div>
+      <div   class="col-auto d-none d-lg-block">
+      <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+     <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+     <h6 id=precprod>R$ 79,90 </h6>
+     <p id=letp>em até 4 vezes de 19,97</p>
+      
+     </div>
+       </div>
+
+         
+       <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+        <div class="col-auto d-flex flex-column position-static">
+        
+        </div>
+    <div   class="col-auto d-none d-lg-block">
+    <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+   <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+   <h6 id=precprod>R$ 79,90 </h6>
+   <p id=letp>em até 4 vezes de 19,97</p>
+    
+  </div>
+     </div>
+
+       
+          <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+            <div class="col-auto d-flex flex-column position-static">
+            
+            </div>
+        <div   class="col-auto d-none d-lg-block">
+        <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+       <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+       <h6 id=precprod>R$ 79,90 </h6>
+       <p id=letp>em até 4 vezes de 19,97</p>
+        
+       
+         </div>
+          </div>
+          <div class="col-lg-2 border rounded overflow-hidden mb-4 shadow-sm">
+            <div class="col-auto d-flex flex-column position-static">
+            
+            </div>
+        <div   class="col-auto d-none d-lg-block">
+        <img id="kits" src="./images/img_produtos/img4.jpg" alt="">
+       <p id=titprod>Camisa do joão do pé de feijão 100% algodão de cor branca</p>
+       <h6 id=precprod>R$ 79,90 </h6>
+       <p id=letp>em até 4 vezes de 19,97</p>
+        
+       
+         </div>
+          </div>
+
+
+       <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
