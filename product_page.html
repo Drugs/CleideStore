@@ -156,11 +156,11 @@
       <div class="container-fluid">
         <div class="row justify-content-center">
           <!--slide de produtos-->
-            <div id="carouselproducts" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div id="carouselproducts" class="carousel carousel-dark slide d-none d-md-flex" data-bs-ride="carousel">
               <div class="container  w-auto">
                 <h2 class="h1">Produtos similares</h2>
                 <!--inner 1-->
-                <div class="carousel-inner d-none d-md-flex margem-t50">
+                <div class="carousel-inner  margem-t50">
                   <!--item 1-->
                   <div class="carousel-item active">
                     <div class="row">
@@ -168,7 +168,7 @@
                         <div class="box-product">
                           <div class="img-area mb-2"> <img src="images/product_page/roupa-1.jpg"> </div>
                           <div class="info-area">
-                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <h3 class="h3 text-uppercase mb-2">Camisa jose</h3>
                             <p class="p-title mb-1">R$ 150,00</p>
                             <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
                             <p class="text-uppercase"></p>
@@ -190,7 +190,7 @@
                         <div class="box-product">
                           <div class="img-area mb-2"> <img src="images/product_page/roupa-3.jpg"> </div>
                           <div class="info-area">
-                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <h3 class="h3 text-uppercase mb-2">Camisa armando</h3>
                             <p class="p-title mb-1">R$ 150,00</p>
                             <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
                             <p class="text-uppercase"></p>
@@ -217,7 +217,7 @@
                         <div class="box-product">
                           <div class="img-area mb-2"> <img src="images/product_page/roupa-1.jpg"> </div>
                           <div class="info-area">
-                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <h3 class="h3 text-uppercase mb-2">Camisa nanananama</h3>
                             <p class="p-title mb-1">R$ 150,00</p>
                             <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
                             <p class="text-uppercase"></p>
@@ -239,7 +239,7 @@
                         <div class="box-product">
                           <div class="img-area mb-2"> <img src="images/product_page/roupa-3.jpg"> </div>
                           <div class="info-area">
-                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <h3 class="h3 text-uppercase mb-2">Camisa npreta</h3>
                             <p class="p-title mb-1">R$ 150,00</p>
                             <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
                             <p class="text-uppercase">Frete grátis</p>
@@ -250,7 +250,7 @@
                         <div class="box-product">
                           <div class="img-area mb-2"> <img src="images/product_page/roupa-1.jpg"> </div>
                           <div class="info-area">
-                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <h3 class="h3 text-uppercase mb-2">Camisa azul</h3>
                             <p class="p-title mb-1">R$ 150,00</p>
                             <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
                             <p class="text-uppercase"></p>
@@ -258,48 +258,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <!--inner 2-->
-                <div class="carousel-inner d-flex d-md-none margem-t50">
-                  <div class="carousel-item active">
-                      <div class="col container-product">
-                        <div class="box-product">
-                          <div class="img-area mb-2"> <img src="images/product_page/roupa-1.jpg"> </div>
-                          <div class="info-area">
-                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
-                            <p class="p-title mb-1">R$ 150,00</p>
-                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
-                            <p class="text-uppercase">Frete grátis</p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="col container-product">
-                        <div class="box-product">
-                          <div class="img-area mb-2"> <img src="images/product_page/roupa-2.jpg"> </div>
-                          <div class="info-area">
-                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
-                            <p class="p-title mb-1">R$ 150,00</p>
-                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
-                            <p class="text-uppercase"></p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                  <div class="carousel-item">
-                      <div class="col container-product">
-                        <div class="box-product">
-                          <div class="img-area mb-2"> <img src="images/product_page/roupa-2.jpg"> </div>
-                          <div class="info-area">
-                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
-                            <p class="p-title mb-1">R$ 150,00</p>
-                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
-                            <p class="text-uppercase">Frete Grátis</p>
-                          </div>
-                        </div>
-                      </div>
                   </div>
                 </div>
               </div>
@@ -313,6 +271,61 @@
                 
               </button>
             </div>
+          <!--slide de produtos mobile-->
+          <div id="carouselproductsmobile" class="carousel carousel-dark slide d-flex d-md-none" data-bs-ride="carousel">
+            <div class="container  w-auto">
+              <h2 class="h1">Produtos similares</h2>
+              <!--inner-->
+              <div class="carousel-inner d-flex d-md-none margem-t50">
+              <div class="carousel-item active ">
+                  <div class="col container-product">
+                    <div class="box-product">
+                      <div class="img-area mb-2"> <img src="images/product_page/roupa-1.jpg"> </div>
+                      <div class="info-area">
+                        <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                        <p class="p-title mb-1">R$ 150,00</p>
+                        <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                        <p class="text-uppercase">Frete grátis</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="carousel-item ">
+                  <div class="col container-product">
+                    <div class="box-product">
+                      <div class="img-area mb-2"> <img src="images/product_page/roupa-2.jpg"> </div>
+                      <div class="info-area">
+                        <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                        <p class="p-title mb-1">R$ 150,00</p>
+                        <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                        <p class="text-uppercase"></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="carousel-item ">
+                  <div class="col container-product">
+                    <div class="box-product">
+                      <div class="img-area mb-2"> <img src="images/product_page/roupa-3.jpg"> </div>
+                      <div class="info-area">
+                        <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                        <p class="p-title mb-1">R$ 150,00</p>
+                        <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                        <p class="text-uppercase">Frete Grátis</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev bg-transparent w-auto mx-2 mx-md-5" type="button" data-bs-target="#carouselproductsmobile" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              
+            </button>
+            <button class="carousel-control-next bg-transparent w-auto mx-2 mx-md-5" type="button" data-bs-target="#carouselproductsmobile" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              
+            </button>
+          </div>
         </div>
       </div>
     </section>

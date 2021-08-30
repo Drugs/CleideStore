@@ -58,6 +58,10 @@ body {
   height: 70px;
 }
 
+.box-product {
+  height: 400px;
+}
+
 .img-area {
   max-width: 300px;
   max-height: 360px;
