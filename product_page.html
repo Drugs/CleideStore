@@ -98,7 +98,7 @@
             </div>
             <!--preço-->
             <div class="row">
-              <p class="p-value mb-0">R$ 150,00</p>
+              <p class="p-title mb-0">R$ 150,00</p>
               <p class="text-muted">Até 2x de R$ 75,00</p>
             </div>
             <!--Titulo e descrição-->
@@ -115,9 +115,9 @@
               <div class="row">
                 <p class="col-3 col-sm-2 p-title text-uppercase">Cor:</p>
                 <div class="col-9 col-sm-10">
-                  <button class="b-round bg-black text-white me-2">P</button>
-                  <button class="b-round bg-white me-2">B</button>
-                  <button class="b-round bg-danger text-white">V</button>
+                  <button class="b-round bg-black text-white me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Camisa preta">P</button>
+                  <button class="b-round bg-white me-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Camisa branca">B</button>
+                  <button class="b-round bg-danger text-white" data-bs-toggle="tooltip" data-bs-placement="top" title="Camisa vermelha">V</button>
                 </div>
               </div>
               <!--selecionar tamanho-->
@@ -134,9 +134,9 @@
               </div>
               <!--Botão de comprar e favorito-->
               <div class="row m-auto mt-3 container-plus align-items-center">
-                <button class="col col-sm btn">Comprar</button>
+                <button class="col col-sm btn shadow-clear">Comprar</button>
                 <div class="col-3 col-sm-2 ms-4">
-                  <button class=" rounded-circle btn ">
+                  <button class=" rounded-circle btn  shadow-clear">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
                       <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
                     </svg>
@@ -151,14 +151,218 @@
 
     <hr class="margem-t100">
 
-    <!--Produto principal-->
-    <section class="margem-t50" style="background-color: #973f3f">
+    <!--produtos similares-->
+    <section class="margem-t50">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <!--slide de produtos-->
+            <div id="carouselproducts" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <!--item 1-->
+              <div class="container w-auto">
+                <h2 class="h1">Produtos similares</h2>
+                <div class="carousel-inner margem-t50">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-3 container-product">
+                        <div class="box-product">
+                          <div class="img-area"> <img src="images/product_page/roupa-1.jpg"> </div>
+                          <div class="info-area">
+                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <p class="p-title mb-1">R$ 150,00</p>
+                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                            <p class="text-uppercase"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3 container-product">
+                        <div class="box-product">
+                          <div class="img-area"> <img src="images/product_page/roupa-2.jpg"> </div>
+                          <div class="info-area">
+                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <p class="p-title mb-1">R$ 150,00</p>
+                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                            <p class="text-uppercase">Frete grátis</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3 container-product">
+                        <div class="box-product">
+                          <div class="img-area"> <img src="images/product_page/roupa-3.jpg"> </div>
+                          <div class="info-area">
+                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <p class="p-title mb-1">R$ 150,00</p>
+                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                            <p class="text-uppercase"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3 container-product">
+                        <div class="box-product">
+                          <div class="img-area"> <img src="images/product_page/roupa-3.jpg"> </div>
+                          <div class="info-area">
+                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <p class="p-title mb-1">R$ 150,00</p>
+                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                            <p class="text-uppercase">Frete grátis</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Item 2-->
+                  <div class="carousel-item ">
+                    <div class="row">
+                      <div class="col-3 container-product">
+                        <div class="box-product">
+                          <div class="img-area"> <img src="images/product_page/roupa-1.jpg"> </div>
+                          <div class="info-area">
+                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <p class="p-title mb-1">R$ 150,00</p>
+                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                            <p class="text-uppercase"></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3 container-product">
+                        <div class="box-product">
+                          <div class="img-area"> <img src="images/product_page/roupa-2.jpg"> </div>
+                          <div class="info-area">
+                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <p class="p-title mb-1">R$ 150,00</p>
+                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                            <p class="text-uppercase">Frete grátis</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3 container-product">
+                        <div class="box-product">
+                          <div class="img-area"> <img src="images/product_page/roupa-3.jpg"> </div>
+                          <div class="info-area">
+                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <p class="p-title mb-1">R$ 150,00</p>
+                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                            <p class="text-uppercase">Frete grátis</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-3 container-product">
+                        <div class="box-product">
+                          <div class="img-area"> <img src="images/product_page/roupa-1.jpg"> </div>
+                          <div class="info-area">
+                            <h3 class="h3 text-uppercase mb-2">Camisa name</h3>
+                            <p class="p-title mb-1">R$ 150,00</p>
+                            <p class="text-muted mb-2">Até 2x de R$ 75,00</p>
+                            <p class="text-uppercase"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="carousel-control-prev bg-transparent w-auto mx-5" type="button" data-bs-target="#carouselproducts" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                
+              </button>
+              <button class="carousel-control-next bg-transparent w-auto mx-5" type="button" data-bs-target="#carouselproducts" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                
+              </button>
+            </div>
+      </div>
+    </section>
+
+    <!--Avaliações e comentarios-->
+    <section class="margem-t150">
+      <!--Avaliação geral-->
       <div class="container">
-        <div class="row">
-          <!--Imagenszinhas-->
+        <h2 class="h1 text-center">Avaliações dos clientes</h2>
+        <div class="row justify-content-center mt-4 ">
+          <div class="col-5 ">
+            <h3 class="text-evaluation text-end">4.6</h3>
+          </div>
+          <div class="col-6">
+            <img class="icon" src="images/icons/star_icon.svg" alt="icone de estrela" />
+            <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+            <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+            <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+            <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+            <p class="mt-2">Média entre 10 opiniões</p>
+          </div>
         </div>
       </div>
-      </section>
+
+      <hr class="margem-t50 mb-4">
+      <!--Comentarios-->
+      <div class="container">
+        <div class="row ">
+          <!--coluna esquerda-->
+          <div class="col">
+            <div class="box-comment">
+              <div class="row">
+                <div class="col-7 justify-content-end">
+                  <h4 class="h4 mb-1">Nome do clientezinho</h4>
+                  <p class="text-muted paragraph">11 de agosto de 2021</p>
+                </div>
+                <div class="col-5">
+                <img class="icon" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                  <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                  <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                  <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                  <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                </div>
+              </div>
+              <div class="row">
+                <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <div class="row">
+                <p class="text-success text-uppercase paragraph">Eu recomendo</p>
+              </div>
+            </div>
+          </div>
+          <!--coluna vazia-->
+          <div class="col-1"></div>
+          <!--coluna direita-->
+          <div class="col">
+            <div class="box-comment">
+              <div class="row">
+                <div class="col-7 justify-content-end">
+                  <h4 class="h4 mb-1">Nome do clientezinho</h4>
+                  <p class="text-muted paragraph">11 de agosto de 2021</p>
+                </div>
+                <div class="col-5">
+                <img class="icon" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                  <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                  <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                  <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                  <img class="icon ms-1" src="images/icons/star_icon.svg" alt="icone de estrela" />
+                </div>
+              </div>
+              <div class="row">
+                <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <div class="row">
+                <p class="text-success text-uppercase paragraph">Eu recomendo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row margem-t50 ">
+          <button class="btn w-32 m-auto ">Ver todos os comentarios</button>
+        </div>
+      </div>
+    </section>
+    <!--anuncio -->
+    <aside class="margem-t50">
+      <div class="container text-center" style="background-color: #C4C4C4; height: 150px;">ANUNCIO DO FIGMA</div>
+    </aside>
+
+    <!-- footer-->
+    <footer class="margem-t100">
+      <div class="container-fluid text-center" style="background-color: #8C8C8C; height: 150px;">FOOTER</div>
+    </footer>
+    
 
     <script>
       //Código pra galeria de imagens
@@ -166,6 +370,9 @@
         var main_prodcut_image = document.getElementById("main_product_image");
         main_prodcut_image.src = element.src;
       }
+
+      //slider de produtos
+
     </script>
 
     <script src="js/bootstrap.min.js"></script>

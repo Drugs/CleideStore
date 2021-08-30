@@ -22,6 +22,32 @@
   text-transform: uppercase !important;
 }
 
+.h2 {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+.h3 {
+  font-size: 26px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+.h4 {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+.paragraph {
+  font-size: 18px;
+}
+
+.w-32 {
+  max-width: 320px;
+}
+
 /*Botoes*/
 .btn {
   font-weight: 400;
@@ -46,6 +72,10 @@
 .margem-t100 {
   /*Margem top media*/
   margin-top: 100px;
+}
+.margem-t150 {
+  /*Margem top alta*/
+  margin-top: 150px;
 }
 
 .shadow-clear {
