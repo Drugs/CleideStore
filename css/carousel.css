@@ -126,3 +126,7 @@
   font-size:x-large;
   
 }
+
+#row {
+  align-items: flex-end;
+}
