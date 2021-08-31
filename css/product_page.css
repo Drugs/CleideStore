@@ -58,7 +58,27 @@ body {
   height: 70px;
 }
 
-/* RESPONSIVE */
-
-@media (min-width: 800px) {
+.box-product {
+  height: 400px;
 }
+
+.img-area {
+  max-width: 300px;
+  max-height: 360px;
+}
+
+.img-area img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.info-area {
+  padding-left: 10px;
+}
+
+.text-evaluation {
+  font-size: 54px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+}
+/* RESPONSIVE */
