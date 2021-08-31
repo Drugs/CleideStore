@@ -39,3 +39,15 @@ button {
     top: var(--topNavbarHeight);
   }
 }
+
+/* Modal */
+
+.btn-modal {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-modal:hover {
+    color: blue;
+}
