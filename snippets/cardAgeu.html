@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<style>
+		div.card-img-overlay{
+			display:none;
+			animation: fadeIn 0.5s;
+		}
+		@keyframes fadeIn {
+			0% {opacity:0;}
+			100% {opacity:1;}
+		}
+		div.card:hover .card-img-overlay , div.card:hover ~ .card-img-overlay {
+			display: block;
+		}
+
+		div.card:hover .back , div.card:hover ~ .back {
+			display: none;
+		}
+
+		@keyframes fadeIn {
+		  0% {opacity:0;}
+		  100% {opacity:1;}
+		}
+	</style>
+    <title>Tela de cadastro</title>
+  </head>
+  <body>
+    
+	<div class="container">
+		<div class="row">
+			<div class="card col-4 text-white" style="background-color: rgb(134, 142, 150); ">
+				<svg class=" bd-placeholder-img bd-placeholder-img-lg card-img" width="100%" height="270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false" style="font-size: calc(1rem + 2.7vw); text-anchor: middle;">
+					<title>Placeholder</title>
+					<rect width="100%" height="100%" fill="#868e96"></rect>	
+					<text x="50%" y="50%" fill="#dee2e6" class="back">Card image</text>
+				</svg>
+				<div class="card-img-overlay">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					<p class="card-text">Last updated 3 mins ago</p>
+				</div>
+			</div>
+			<div class="card col-4 text-white" style="background-color: rgb(134, 142, 150); ">
+				<svg class=" bd-placeholder-img bd-placeholder-img-lg card-img" width="100%" height="270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false" style="font-size: calc(1rem + 2.7vw); text-anchor: middle;">
+					<title>Placeholder</title>
+					<rect width="100%" height="100%" fill="#868e96"></rect>	
+					<text x="50%" y="50%" fill="#dee2e6" class="back">Card image</text>
+				</svg>
+				<div class="card-img-overlay">
+					<h5 class="card-title">Card title</h5>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					<p class="card-text">Last updated 3 mins ago</p>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+     
+  </body>
+</html>
