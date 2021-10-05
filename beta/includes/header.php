@@ -10,12 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/saimon/index.css">
+    <link rel="stylesheet" href="../css/<?= DEV ?>/<?= FILE ?>.css">
 
-    <title>Hello, world!</title>
+    <title><?= strtoupper(FILE); ?></title>
 </head>
 
 <body>
-    <header>
-        Nav de todas paginas
-    </header>
