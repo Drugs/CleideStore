@@ -1,2 +1,194 @@
-@import url(bootstrap.min.css);
 /* ===== SUBSCREVENDO CLASSES DO BOOTSTRAP E CRIANDO NOVOS PADRÕES ===== */
+@import url(bootstrap.min.css);
+
+/* ===== Variaveis da paleta de cores ===== */
+:root {
+  --pink-cleide: #ef476f;
+  --yellow-cleide: #ffd166;
+  --green-cleide: #06d6a0;
+  --blue-light-cleide: #118ab2;
+  --blue-dark-cleide: #083b4b;
+  --black-cleide: #2f2f2f;
+  --gray-light-cleide: #f8f8f8;
+  --gray-dark-cleide: #bbbbbb;
+}
+
+/* ===== Botões ===== */
+
+/* Padrão de todos botões */
+.btn {
+  font-weight: 500 !important;
+  padding: 0.5rem !important;
+  text-transform: uppercase;
+  word-wrap: break-word !important;
+  border: 2px solid transparent !important;
+  font-size: 1.2rem !important;
+  border-radius: 0.4rem !important;
+  color: var(--black-cleide) !important;
+}
+
+.btn:hover {
+  border: 2px solid var(--black-cleide) !important;
+}
+
+/* Define os tamanhos dos botões */
+.btn-lg {
+  width: 15rem !important;
+}
+.btn-md {
+  width: 12.5rem !important;
+}
+.btn-sm {
+  width: 10rem !important;
+}
+
+/* botões preenchidos*/
+
+.btn-pink {
+  background-color: var(--pink-cleide) !important;
+  border-color: var(--pink-cleide) !important;
+  color: var(--gray-light-cleide) !important;
+}
+.btn-pink:hover {
+  background-color: var(--gray-light-cleide) !important;
+  border-color: var(--pink-cleide) !important;
+  color: var(--pink-cleide) !important;
+}
+
+.btn-yellow {
+  background-color: var(--yellow-cleide) !important;
+  border-color: var(--yellow-cleide) !important;
+  color: var(--gray-light-cleide) !important;
+}
+.btn-yellow:hover {
+  background-color: var(--gray-light-cleide) !important;
+  border-color: var(--yellow-cleide) !important;
+  color: var(--yellow-cleide) !important;
+}
+
+.btn-green {
+  background-color: var(--green-cleide) !important;
+  border-color: var(--green-cleide) !important;
+  color: var(--gray-light-cleide) !important;
+}
+.btn-green:hover {
+  background-color: var(--gray-light-cleide) !important;
+  border-color: var(--green-cleide) !important;
+  color: var(--green-cleide) !important;
+}
+
+.btn-blue-light {
+  background-color: var(--blue-light-cleide) !important;
+  border-color: var(--blue-light-cleide) !important;
+  color: var(--gray-light-cleide) !important;
+}
+.btn-blue-light:hover {
+  background-color: var(--gray-light-cleide) !important;
+  border-color: var(--blue-light-cleide) !important;
+  color: var(--blue-light-cleide) !important;
+}
+
+.btn-blue-dark {
+  background-color: var(--blue-dark-cleide) !important;
+  border-color: var(--blue-dark-cleide) !important;
+  color: var(--gray-light-cleide) !important;
+}
+.btn-blue-dark:hover {
+  background-color: var(--gray-light-cleide) !important;
+  border-color: var(--blue-dark-cleide) !important;
+  color: var(--blue-dark-cleide) !important;
+}
+
+.btn-black {
+  background-color: var(--black-cleide) !important;
+  border-color: var(--black-cleide) !important;
+  color: var(--gray-light-cleide) !important;
+}
+.btn-black:hover {
+  background-color: var(--gray-light-cleide) !important;
+  border-color: var(--black-cleide) !important;
+  color: var(--black-cleide) !important;
+}
+
+.btn-gray {
+  background-color: var(--gray-dark-cleide) !important;
+  border-color: var(--gray-dark-cleide) !important;
+  color: var(--gray-light-cleide) !important;
+}
+.btn-gray:hover {
+  background-color: var(--gray-light-cleide) !important;
+  border-color: var(--gray-dark-cleide) !important;
+  color: var(--gray-dark-cleide) !important;
+}
+
+/* botões outlines*/
+
+.btno-pink {
+  border-color: var(--pink-cleide) !important;
+  color: var(--pink-cleide) !important;
+}
+.btno-pink:hover {
+  color: var(--gray-light-cleide) !important;
+  border-color: var(--pink-cleide) !important;
+  background-color: var(--pink-cleide) !important;
+}
+
+.btno-yellow {
+  border-color: var(--yellow-cleide) !important;
+  color: var(--yellow-cleide) !important;
+}
+.btno-yellow:hover {
+  color: var(--gray-light-cleide) !important;
+  border-color: var(--yellow-cleide) !important;
+  background-color: var(--yellow-cleide) !important;
+}
+
+.btno-green {
+  border-color: var(--green-cleide) !important;
+  color: var(--green-cleide) !important;
+}
+.btno-green:hover {
+  color: var(--gray-light-cleide) !important;
+  border-color: var(--green-cleide) !important;
+  background-color: var(--green-cleide) !important;
+}
+
+.btno-blue-light {
+  border-color: var(--blue-light-cleide) !important;
+  color: var(--blue-light-cleide) !important;
+}
+.btno-blue-light:hover {
+  color: var(--gray-light-cleide) !important;
+  border-color: var(--blue-light-cleide) !important;
+  background-color: var(--blue-light-cleide) !important;
+}
+
+.btno-blue-dark {
+  border-color: var(--blue-dark-cleide) !important;
+  color: var(--blue-dark-cleide) !important;
+}
+.btno-blue-dark:hover {
+  color: var(--gray-light-cleide) !important;
+  border-color: var(--blue-dark-cleide) !important;
+  background-color: var(--blue-dark-cleide) !important;
+}
+
+.btno-black {
+  border-color: var(--black-cleide) !important;
+  color: var(--black-cleide) !important;
+}
+.btno-black:hover {
+  color: var(--gray-light-cleide) !important;
+  border-color: var(--black-cleide) !important;
+  background-color: var(--black-cleide) !important;
+}
+
+.btno-gray {
+  border-color: var(--gray-dark-cleide) !important;
+  color: var(--gray-dark-cleide) !important;
+}
+.btno-gray:hover {
+  color: var(--gray-light-cleide) !important;
+  border-color: var(--gray-dark-cleide) !important;
+  background-color: var(--gray-dark-cleide) !important;
+}

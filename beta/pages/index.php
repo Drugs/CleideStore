@@ -1,6 +1,5 @@
 <?php
-define('DEV', 'saimon');
-define('FILE', 'index');
+define('TITLE', 'Cleide Store - Index');
 include '../includes/header.php';
 ?>
 
@@ -8,9 +7,7 @@ include '../includes/header.php';
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
+                <strong>Logo</strong>
             </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -25,19 +22,31 @@ include '../includes/header.php';
             </form>
 
             <div class="dropdown text-end">
-                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
                     <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                 </a>
-                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="#">Minha conta</a></li>
+                    <li><a class="dropdown-item" href="#">Meus pedidos</a></li>
+                    <li><a class="dropdown-item" href="#"></a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    <li><a class="dropdown-item" href="#">Sair</a></li>
                 </ul>
             </div>
+
+
+
         </div>
     </div>
 </header>
+<div class="container ">
+
+
+</div>
+
+
+<?php
+include '../includes/footer.php';
+?>

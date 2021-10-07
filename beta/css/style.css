@@ -1,0 +1,8 @@
+/* ESTILIZAÇÃO DE COISAS UNICAS DA PAGINA PRINCIPAL */
+@import url(pattern.css);
+
+body{
+    font-family: 'Poppins', sans-serif !important;
+}
+
+
