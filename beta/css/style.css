@@ -1,8 +1,33 @@
-/* ESTILIZAÇÃO DE COISAS UNICAS DA PAGINA PRINCIPAL */
-@import url(pattern.css);
+/* ===== Chamando variaveis do bootstrap ===== */
+@import url(bootstrap.min.css);
 
-body{
-    font-family: 'Poppins', sans-serif !important;
+/* ===== Variaveis da paleta de cores ===== */
+@import url(colors.css);
+
+/* ===== Botões ===== */
+@import url(components/buttons.css);
+
+/* ============================== Codigos soltos ============================== */
+
+body {
+  font-family: "Poppins", sans-serif !important;
 }
 
+/* ===== PARAGRAFOS =====*/
+/* Tamanho pequeno para paragrafos*/
+.prg-0 {
+  color: var(--black-cleide);
+  font-size: 1rem;
+}
 
+/* Tamanho padrao para paragrafos*/
+.prg-1 {
+  color: var(--black-cleide);
+  font-size: 1.15rem;
+}
+
+/* Tamanho grande para paragrafos*/
+.prg-2 {
+  color: var(--black-cleide);
+  font-size: 1.3rem;
+}

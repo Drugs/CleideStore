@@ -1,5 +1,6 @@
 <footer>
-    footer de todas paginas
+    <p class="prg-1 text-center">footer de todas paginas</p>
+
 </footer>
 
 <!-- bootstrap js -->
