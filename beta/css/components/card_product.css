@@ -1,0 +1,22 @@
+.box-product {
+  height: 400px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.img-area {
+  max-width: 300px;
+  max-height: 360px;
+}
+
+.img-area img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (max-width: 575px) {
+  .box-product {
+    align-items: center;
+  }
+}

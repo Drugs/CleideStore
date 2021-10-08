@@ -4,8 +4,9 @@
 /* ===== Variaveis da paleta de cores ===== */
 @import url(colors.css);
 
-/* ===== Botões ===== */
+/* ===== Componentes ===== */
 @import url(components/buttons.css);
+@import url(components/card_product.css);
 
 /* ============================== Codigos soltos ============================== */
 
@@ -14,6 +15,7 @@ body {
 }
 
 /* ===== PARAGRAFOS =====*/
+
 /* Tamanho pequeno para paragrafos*/
 .prg-0 {
   color: var(--black-cleide);
