@@ -14,7 +14,23 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+/* ===== LINKS =====*/
+
+.link-reset {
+  text-decoration: none;
+  color: var(--black-cleide);
+}
+.link-reset:hover {
+  color: var(--blue-light-cleide);
+}
+
 /* ===== PARAGRAFOS =====*/
+
+/* Tamanho minusculo para paragrafos*/
+.prg-tiny {
+  color: var(--black-cleide);
+  font-size: 0.75rem;
+}
 
 /* Tamanho pequeno para paragrafos*/
 .prg-0 {
@@ -32,4 +48,25 @@ body {
 .prg-2 {
   color: var(--black-cleide);
   font-size: 1.3rem;
+}
+
+/* ===== CARROSEIS =====*/
+.thumbnail:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.thumbnail-image {
+  max-width: 134px;
+}
+
+.thumbnail-full {
+  max-width: 520px;
+}
+
+/* ===== CARROSEIS =====*/
+
+/* Altura maxima dos items*/
+
+.carousel-item img {
+  height: 25rem;
 }

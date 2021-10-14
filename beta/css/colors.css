@@ -8,3 +8,59 @@
   --gray-light-cleide: #f8f8f8;
   --gray-dark-cleide: #bbbbbb;
 }
+
+/* ===== Backgrounds / Texts / Etc =====*/
+
+/* backgrounds*/
+
+.bg-pink {
+  background-color: var(--pink-cleide) !important;
+}
+.bg-yellow {
+  background-color: var(--yellow-cleide) !important;
+}
+.bg-green {
+  background-color: var(--green-cleide) !important;
+}
+.bg-blue-light {
+  background-color: var(--blue-light-cleide) !important;
+}
+.bg-blue-dark {
+  background-color: var(--blue-dark-cleide) !important;
+}
+.bg-black {
+  background-color: var(--black-cleide) !important;
+}
+.bg-gray-light {
+  background-color: var(--gray-light-cleide) !important;
+}
+.bg-gray-dark {
+  background-color: var(--gray-dark-cleide) !important;
+}
+
+/* Texts */
+
+.text-pink {
+  color: var(--pink-cleide) !important;
+}
+.text-yellow {
+  color: var(--yellow-cleide) !important;
+}
+.text-green {
+  color: var(--green-cleide) !important;
+}
+.text-blue-light {
+  color: var(--blue-light-cleide) !important;
+}
+.text-blue-dark {
+  color: var(--blue-dark-cleide) !important;
+}
+.text-black {
+  color: var(--black-cleide) !important;
+}
+.text-gray-light {
+  color: var(--gray-light-cleide) !important;
+}
+.text-gray-dark {
+  color: var(--gray-dark-cleide) !important;
+}

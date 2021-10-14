@@ -18,5 +18,11 @@
 @media (max-width: 575px) {
   .box-product {
     align-items: center;
+    justify-content: center;
+  }
+  .info-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

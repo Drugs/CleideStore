@@ -21,7 +21,8 @@ function ShowProducts($maxP = '')
             $displayedProducts++;
             $installments = ceil($row['valor_produto'] / 2);
             echo "
-                <div class='col-12 col-sm-6 col-md-4 col-lg-3 container-product'>
+            <div class='col-12 col-sm-6 col-md-4 col-lg-3 container-product'>
+                <a href='../functions/redirect_products.php?id={$row['id_produto']}' class='link-reset'>
                     <div class=' box-product mb-4'>
                         <div class='img-area mb-2'> <img src='../images/roupa-1.jpg'> </div>
                         <div class='info-area'>
@@ -30,7 +31,8 @@ function ShowProducts($maxP = '')
                             <p class='prg-1 text-uppercase'>Frete grátis</p>
                         </div>
                     </div>
-                </div>
+                </a>
+            </div>
                 ";
         } elseif ($displayedProducts == 20) {
             exit();
