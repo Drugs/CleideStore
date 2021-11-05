@@ -1,5 +1,5 @@
 <?php
-include 'Connection.php';
+include '../database/Connection.php';
 session_start();
 $id = $_GET['id'];
 $_SESSION['id'] = $id;
@@ -16,7 +16,7 @@ $data_cupom = '';
 $desconto_cupom = 0;
 $codigo_cupom = '';
 $text_status = 'success';
-$discounted = false; 
+$discounted = false;
 
 $result = mysqli_query($GLOBALS['connection'], $query);
 
@@ -49,7 +49,7 @@ function CreateList()
             $GLOBALS['codigo_cupom'] = $row['codigo_cupom'];
             ValidateCupom($row['d_limite_cupom'], $row['valor_cupom']);
         }
-    } 
+    }
 }
 
 function ValidateCupom($data_cupom, $valor)
@@ -69,69 +69,31 @@ function ValidateCupom($data_cupom, $valor)
         $GLOBALS['codigo_cupom'] = $GLOBALS['codigo_cupom'] . ' - Expirado';
     }
 }
-
+define('TITLE', 'Carrinho');
+define('CSSFILE', '../');
+include '../includes/header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="includes/bootstrap.min.css" />
-    <title>Compras de <?= $cliente ?></title>
-</head>
-
-<body>
-        <ul class='list-group mb-3 mt-5'>
-
-            <?php CreateList(); ?>
-            <li class="list-group-item d-flex justify-content-between bg-light">
-                <div class="text-<?= $text_status ?>">
-                    <h6 class="my-0">Cupom de desconto</h6>
-                    <small><?= $codigo_cupom ?></small>
-                </div>
-                <span class="text-<?= $text_status ?>">−R$ <?= $desconto_cupom ?></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-                <span>Total:</span>
-                <strong>$<?= $total ?></strong>
-            </li>  
-        </ul>
-        <div class="row text-center mt-3">
-            <h2 class="h2 ">Cliente: <?= $cliente ?></h2>
-            <p>Deseja finalizar sua compra ?</p>
-            <a class="btn btn-success" href="./check.php">Comprar</a>
-        </div>
-
-
+<div class="container">
+    <ul class='list-group mb-3 mt-5'>
+        <?php CreateList(); ?>
+        <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-<?= $text_status ?>">
+                <h6 class="my-0">Cupom de desconto</h6>
+                <small><?= $codigo_cupom ?></small>
+            </div>
+            <span class="text-<?= $text_status ?>">−R$ <?= $desconto_cupom ?></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+            <span>Total:</span>
+            <strong>$<?= $total ?></strong>
+        </li>
+    </ul>
+    <div class="row text-center mt-3">
+        <h2 class="h2 ">Cliente: <?= $cliente ?></h2>
+        <p>Deseja finalizar sua compra ?</p>
+        <a class="btn btn-success" href="./check.php">Comprar</a>
     </div>
 
-    <footer class="mb-4 mt-5">
-        <div class="container-fluid">
-            <p class="text-center display-8 mb-1">Código criado e bugado por alguém do grupo B.</p>
 
-            <p class="display-8 text-center"><a href="https://instagram.com/siimon.pao" class="text-decoration-none text-info">☕ Me pague um café ❤</a></p>
-
-        </div>
-    </footer>
-
-    <script src="includes/bootstrap.min.js"></script>
-</body>
-
-</html>
-
-<!--
-                     .
-                    / V\
-                  / `  /
-                 <<   |
-                 /    |
-               /      |
-             /        |
-           /    \  \ /
-          (      ) | |
-    _______|   _/_  | |
-  <_________\______)\__)
--->
+</div>
+<?php include '../includes/footer.php'; ?>

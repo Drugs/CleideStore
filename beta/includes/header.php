@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="<?= CSSFILE ?>css/style.css">
 
     <title><?= strtoupper(TITLE); ?></title>
 </head>
@@ -18,7 +18,7 @@
     <header class="p-3 mb-5 border-bottom">
         <div class="container ">
             <div class="d-flex flex-wrap align-items-center ">
-                <a href="../pages/index.php" class="col-12 col-md-2 d-flex align-items-center mb-3 mb-md-0 text-dark text-decoration-none">
+                <a href="../index.php" class="col-12 col-md-2 d-flex align-items-center mb-3 mb-md-0 text-dark text-decoration-none">
                     <strong>Cleide Store</strong>
                 </a>
                 <form class="col mb-3 mb-lg-0 me-sm-5 " action="../pages/listing_products.php" method="GET">
@@ -27,11 +27,12 @@
 
                 <div class="col-2 col-sm-1 ms-4 ms-sm-0 dropdown text-end">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">
-                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+
+                        <img src="<?= CSSFILE ?>images/icons/account.svg" alt="Icone de conta">
                     </a>
                     <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">Carrinho</a></li>
-                        <li><a class="dropdown-item" href="#">Minha conta</a></li>
+                        <li><a class="dropdown-item" href="<?= CSSFILE ?>pages/carrinho.php">Carrinho</a></li>
+                        <li><a class="dropdown-item" href="../">Minha conta</a></li>
                         <li><a class="dropdown-item" href="#">Meus pedidos</a></li>
 
                         <li>

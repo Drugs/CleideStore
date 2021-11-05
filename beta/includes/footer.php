@@ -1,5 +1,5 @@
-<section class="container text-center bg-gray-dark text-gray-light py-4 mt-4">
-    Anuncio do FIGMA!❤
+<section class="container mt-4 p-0">
+    <img src="<?= CSSFILE ?>images/ad_figma.png" alt="">
 </section>
 <section class="container text-center bg-gray-dark text-gray-light py-4 mt-4">
     Anuncio das casas bahia!
@@ -22,7 +22,7 @@
 </footer>
 
 <!-- bootstrap js -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="<?= CSSFILE ?>js/bootstrap.min.js"></script>
 
 </body>
 

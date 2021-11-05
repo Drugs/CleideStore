@@ -7,6 +7,8 @@
 /* ===== Componentes ===== */
 @import url(components/buttons.css);
 @import url(components/card_product.css);
+@import url(components/texts.css);
+@import url(components/inputs.css);
 
 /* ============================== Codigos soltos ============================== */
 
@@ -63,10 +65,18 @@ body {
   max-width: 520px;
 }
 
-/* ===== CARROSEIS =====*/
-
 /* Altura maxima dos items*/
 
 .carousel-item img {
   height: 25rem;
+}
+
+/* ===== ICONES =====*/
+.icon {
+  max-height: 25px;
+}
+
+/* ===== ALEATORIOS =====*/
+.shadow-clear {
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 15%);
 }
