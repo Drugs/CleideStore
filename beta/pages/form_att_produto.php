@@ -1,59 +1,15 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.87.0">
-    <title>Checkout example · Bootstrap v5.1</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
-
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
 <?php 
-$server = "localhost";
-$user = "root";
-$password = "";
-$database = "cleide_store_beta";
-
-$connection = mysqli_connect($server, $user, $password, $database);
-
-if (mysqli_connect_errno()) {
-    echo "Falha ao conectar " . mysqli_connect_error();
-    exit();
-}
-
+Define ('TITLE' , 'Atualizar informações do Produto');
+Define('CSSFILE' , '../');
+include "../includes/header.php";
+include '../database/Connection.php';
 $consulta = "SELECT * FROM `produto` WHERE id_produto = {$_GET['id']}";
 $resultado = mysqli_query ($connection, $consulta);
 $dados = mysqli_fetch_assoc($resultado);
 ?>
 
-    <!-- Custom styles for this template -->
-<link href="./css/cadastro.css" rel="stylesheet">
-
-</head>
-  
 <body class="bg-light">
     
 <div class=" d-flex justify-content-center container">
@@ -64,10 +20,10 @@ $dados = mysqli_fetch_assoc($resultado);
     <div class="col-md-7 col-lg-12">
       </br>
       </br>
-      <center>  <h4 class="mb-3">Atualizar informações do produto</h4> </center>
+      <h4 class="text-center mb-3">Atualizar informações do produto</h4>
       </br>
     
-      <form action="cod_att_produto.php" method="post" >
+      <form action="../functions/cod_att_produto.php" method="post" >
         <div class="row g-3">
           <div class="col-sm-6">
               <label for="firstName" class="form-label">Nome</label>
@@ -104,13 +60,14 @@ $dados = mysqli_fetch_assoc($resultado);
       </div>
               <input type="hidden" id="custId" name="id" value=<?php echo $_GET['id']?>>
               <hr class="my-4 col-lg-12">
-        <div class= col-lg-12>
-              <button class="w-100 btn btn-primary btn-lg " type="submit">Atualizar informações do produto</button>
+        <div class="row justify-content-center">
+              <button class="w-100 btn btn-primary btn-lg " type="submit">Atualizar</button>
         </div>
 
         </form>
       </div>
     </div>
+    <?php include "../includes/footer.php"; ?>
   </main>
 
  

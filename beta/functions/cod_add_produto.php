@@ -65,7 +65,7 @@ $_GET['status'] = 0;
 
 if (isset($_GET['status'])){
     
-    header ("Location: index_produtos.php?confirmacao={$_GET['status']}"); 
+    header ("Location: ../pages/index_produtos.php?confirmacao={$_GET['status']}"); 
     
 };
 

@@ -17,12 +17,12 @@ if( $_POST['b'] == 'idp')  {
       $_GET['status'] = 3;
       
       if (isset($_GET['status'])){
-      header ("Location: formbusca.php?confirmacao={$_GET['status']}&id={$_POST['id']}"); 
+      header ("Location: form_busca_produto.php?confirmacao={$_GET['status']}&id={$_POST['id']}"); 
       }
     } else {
     while ($a < $itens) {
           echo "
-          <table class='table  table-dark table-hover table-striped table-bordered table-hover'>
+          <table class='table  table-light table-hover table-striped table-bordered table-hover'>
           <thead class='text-center text-uppercase'>
           <tr>
             <th>Nome do Produto</th>
@@ -67,12 +67,12 @@ if( $_POST['b'] == 'nome')  {
       $_GET['status'] = 4;
       
       if (isset($_GET['status'])){
-      header ("Location: formbusca.php?confirmacao={$_GET['status']}&id={$_POST['id']}"); 
+      header ("Location: form_busca_produto.php?confirmacao={$_GET['status']}&id={$_POST['id']}"); 
       }
     } else {
     while ($a < $item) {
            echo "
-          <table class='table  table-dark table-hover table-striped table-bordered table-hover'>
+          <table class='table  table-light table-hover table-striped table-bordered table-hover'>
           <thead class='text-center text-uppercase'>
           <tr>
             <th>Nome do Produto</th>

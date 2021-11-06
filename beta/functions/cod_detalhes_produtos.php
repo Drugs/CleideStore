@@ -34,6 +34,10 @@ echo "
       <a class='btn btn-warning' href='form_att_produto.php?id={$row['id_produto']}'>Editar</a>
     <div class= 'col-lg-3'> 
     </div>
-      <a class='btn btn-danger' href='form_del_produto.php?id={$row['id_produto']}'>Deletar</a>
+  
+<button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#rapadura'>
+Deletar
+</button>
+
     </div>
     ";

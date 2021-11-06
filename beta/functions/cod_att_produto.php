@@ -16,6 +16,6 @@ $_GET['status'] = 2;
 
 if (isset($_GET['status'])){
     
-    header ("Location: index_detalhes_produto.php?confirmacao={$_GET['status']}&id={$_POST['id']}"); 
+    header ("Location: ../pages/index_detalhes_produto.php?confirmacao={$_GET['status']}&id={$_POST['id']}"); 
 };
 ?>

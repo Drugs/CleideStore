@@ -1,14 +1,11 @@
-<?php include 'tabela_index_produto.php'; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href= "../css/bootstrap.min.css"/>
-  <title>Consulta de cliente</title>
-</head>
+<?php 
+Define ('TITLE' , 'Pagina Suporte');
+Define('CSSFILE' , '../');
+include "../includes/header.php";
+include '../functions/tabela_index_produto.php'; ?>
 
 <body>
   <div class="container m-auto">
@@ -53,6 +50,7 @@
     </tbody>
     </table>
 </div>
+<?php include "../includes/footer.php"; ?>
   <script src="bootstrap.min.js"></script>
 </body>
 
