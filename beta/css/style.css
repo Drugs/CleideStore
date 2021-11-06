@@ -67,10 +67,6 @@ body {
 
 /* Altura maxima dos items*/
 
-.carousel-item img {
-  height: 25rem;
-}
-
 /* ===== ICONES =====*/
 .icon {
   max-height: 25px;
@@ -79,4 +75,31 @@ body {
 /* ===== ALEATORIOS =====*/
 .shadow-clear {
   box-shadow: 0px 0px 10px rgb(0 0 0 / 15%);
+}
+
+.ad {
+  height: 80px !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.ad-figma {
+  background-image: url("../images/adverts/ad_figma.png");
+}
+.ad-magalu {
+  background-image: url("../images/adverts/ad_magalu.png");
+}
+
+/* ========== DEIXAR ALGUNS PARANAUE RESPONSIVO ==========*/
+@media (max-width: 576px) {
+  .ad {
+    height: 70px !important;
+  }
+  .ad-figma {
+    background-image: url("../images/adverts/ad_figma_mb.png");
+  }
+  .ad-magalu {
+    background-image: url("../images/adverts/ad_magalu_mb.png");
+  }
 }

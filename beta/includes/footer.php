@@ -1,8 +1,7 @@
-<section class="container mt-4 p-0">
-    <img src="<?= CSSFILE ?>images/ad_figma.png" alt="">
-</section>
-<section class="container text-center bg-gray-dark text-gray-light py-4 mt-4">
-    Anuncio das casas bahia!
+<section class="container mt-4 ">
+    <p class="prg-0 mb-0 text-muted">PUBLICIDADE</p>
+    <div class="ad ad-figma mt-1"><span class="d-none">Anuncio Figma</span></div>
+    <div class="ad ad-magalu mt-3"><span class="d-none">Anuncio Magalu</span></div>
 </section>
 <footer class="container-fluid bg-black py-5 mt-5">
 
