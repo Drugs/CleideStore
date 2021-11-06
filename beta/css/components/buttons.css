@@ -175,3 +175,18 @@
   border-color: var(--gray-dark-cleide) !important;
   background-color: var(--gray-dark-cleide) !important;
 }
+
+/* Botões redondos */
+
+.btn-rounded-md {
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+}
+.btn-rounded-lg {
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 60px !important;
+  padding: 0 !important;
+}

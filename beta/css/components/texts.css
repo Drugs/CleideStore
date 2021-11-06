@@ -1,0 +1,27 @@
+/* ===== Titulos =====*/
+h1 {
+  font-size: 36px !important;
+  color: var(--black-cleide) !important;
+}
+h2 {
+  font-size: 30px !important;
+  color: var(--black-cleide) !important;
+}
+h3 {
+  font-size: 26px !important;
+  color: var(--black-cleide) !important;
+}
+h4 {
+  font-size: 22px !important;
+  color: var(--black-cleide) !important;
+}
+h5 {
+  font-size: 20px !important;
+  color: var(--black-cleide) !important;
+}
+
+/* ===== Detalhes para textos =====*/
+
+.bold {
+  font-weight: bold;
+}
