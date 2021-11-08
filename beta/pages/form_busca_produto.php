@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="pt-br">
 <?php 
-Define ('TITLE' , 'Pagina Suporte');
+Define ('TITLE' , 'Buscar por produto');
 Define('CSSFILE' , '../');
-include "../includes/header.php";
+include "../includes/header_dash.php";
 include '../database/Connection.php';
 ?>
 <body class="bg-light">
@@ -73,7 +73,7 @@ include '../database/Connection.php';
 </div>
 
 <?php 
-include "../includes/footer.php";
+include "../includes/footer_dash.php";
 ?>
 
     <script src="./bootstrap.min.js"></script>

@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="pt-br">
 <?php
-Define ('TITLE' , 'Pagina Suporte');
+Define ('TITLE' , 'Adicionar Produto');
 Define('CSSFILE' , '../');
-include "../includes/header.php";
+include "../includes/header_dash.php";
 include '../database/Connection.php';
 ?>
   </head>
@@ -70,7 +70,7 @@ include '../database/Connection.php';
 
  
 </div>
-<?php include "../includes/footer.php"; ?>
+<?php include "../includes/footer_dash.php"; ?>
 
 
     <script src="./bootstrap.min.js"></script>

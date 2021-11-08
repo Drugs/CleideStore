@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="pt-br">
 <?php
-Define ('TITLE' , 'Pagina Suporte');
+Define ('TITLE' , 'Burcar por suporte');
 Define('CSSFILE' , '../');
-include "../includes/header.php";
+include "../includes/header_dash.php";
 ?>
 <body class="bg-light">
 <div class="d-flex justify-content-center container">
@@ -76,7 +76,7 @@ include "../includes/header.php";
  
 </div>
     </div>
-    <?php include "../includes/footer.php";?>
+    <?php include "../includes/footer_dash.php";?>
 
     <script src="./bootstrap.min.js"></script>
 
