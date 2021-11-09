@@ -64,3 +64,6 @@
 .text-gray-dark {
   color: var(--gray-dark-cleide) !important;
 }
+.text-white {
+  color: #fff !important;
+}

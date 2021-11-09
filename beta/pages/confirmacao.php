@@ -1,7 +1,7 @@
 <?php
-include 'Connection.php';
+include '../database/Connection.php';
 session_start();
-$id = $_SESSION['id'];
+$id = $_GET['id'];
 $query = "SELECT * FROM pedido 
 JOIN cliente ON pedido.fk_id_cliente = cliente.id_cliente 
 JOIN item_pedido ON item_pedido.fk_id_pedido = pedido.id_pedido 
@@ -33,14 +33,14 @@ function CreateList()
             <li class='list-group-item d-flex justify-content-between lh-sm'>
             <div>
                 <h6 class='my-0'>{$row['nome_produto']}</h6>
-                <small class='text-muted'>{$row['quantidade_item']} Items de: R$ {$row['valor_produto']}</small>
+                <small class='text-muted'>{$row['quant_item']} Items de: R$ {$row['valor_produto']}</small>
             </div>
             
-            <span class='text-muted'>R$" . $row['valor_produto'] * $row['quantidade_item'] . "</span>
+            <span class='text-muted'>R$" . $row['valor_produto'] * $row['quant_item'] . "</span>
         </li>
             ";
 
-        $GLOBALS['total'] += $row['valor_produto'] * $row['quantidade_item'];
+        $GLOBALS['total'] += $row['valor_produto'] * $row['quant_item'];
 
         if (isset($row['codigo_cupom']) && $GLOBALS['discounted'] == false) {
 
@@ -78,7 +78,7 @@ function ValidateCupom($data_cupom, $valor)
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="includes/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <title>Confirmação de <?= $cliente ?></title>
 </head>
 
@@ -101,7 +101,7 @@ function ValidateCupom($data_cupom, $valor)
         <div class="row text-center mt-3">
             <h2 class="h2 "><?= $cliente ?></h2>
             <p>Deseja finalizar sua compra ?</p>
-            <a class="btn btn-success" href="./white.php">Finalizar</a>
+            <a class="w-100 btn btn-success btn-lg" href="./white.php" type="submit">Finalizar</a>
         </div>
 
 
@@ -116,7 +116,7 @@ function ValidateCupom($data_cupom, $valor)
         </div>
     </footer>
 
-    <script src="includes/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>

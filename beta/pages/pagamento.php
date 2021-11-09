@@ -1,5 +1,5 @@
 <?php 
-session_start();
+include '../database/Connection.php';
 
 ?>
 
@@ -45,7 +45,7 @@ session_start();
 <div class="container">
   <main>
     <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+      <img class="d-block mx-auto mb-4" src="../images/bootstrap-logo.svg" alt="" width="72" height="57">
       <h2>PAGAMENTO</h2>
       <p class="lead">Essa é a etapa de pagamento.</p>
     </div>
@@ -118,8 +118,7 @@ session_start();
           </div>
 
           <hr class="my-4">
-
-          <a class="w-100 btn btn-primary btn-lg" href="confirmação.php" type="submit">Continue pagamento</a>
+          <a class="w-100 btn btn-success btn-lg" href="confirmacao.php" type="submit">Continue pagamento</a>
         </form>
       </div>
     </div>
@@ -136,7 +135,7 @@ session_start();
 </div>
 
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
 
       <script src="form-validation.js"></script>
   </body>

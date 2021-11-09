@@ -1,14 +1,15 @@
 <?php
 include '../database/Connection.php';
 session_start();
-$id = $_GET['id'];
-$_SESSION['id'] = $id;
+
+$_SESSION["id"] = "2";
+
 $query = "SELECT * FROM pedido 
 JOIN cliente ON pedido.fk_id_cliente = cliente.id_cliente 
 JOIN item_pedido ON item_pedido.fk_id_pedido = pedido.id_pedido 
 JOIN produto ON produto.id_produto = item_pedido.fk_id_produto 
 LEFT JOIN cupom ON cupom.id_cupom = pedido.fk_id_cupom 
-WHERE id_cliente = {$id}";
+WHERE id_cliente = {$_SESSION['id']}";
 
 $total = 0;
 $cliente = 'Teste';
@@ -34,14 +35,14 @@ function CreateList()
             <li class='list-group-item d-flex justify-content-between lh-sm'>
             <div>
                 <h6 class='my-0'>{$row['nome_produto']}</h6>
-                <small class='text-muted'>{$row['quantidade_item']} Items de: R$ {$row['valor_produto']}</small>
+                <small class='text-muted'>{$row['quant_item']} Items de: R$ {$row['valor_produto']}</small>
             </div>
             <button class='btn btn-sm btn-outline-secondary' type=''>Adcionar</button>
-            <span class='text-muted'>R$" . $row['valor_produto'] * $row['quantidade_item'] . "</span>
+            <span class='text-muted'>R$" . $row['valor_produto'] * $row['quant_item'] . "</span>
         </li>
             ";
 
-        $GLOBALS['total'] += $row['valor_produto'] * $row['quantidade_item'];
+        $GLOBALS['total'] += $row['valor_produto'] * $row['quant_item'];
 
         if (isset($row['codigo_cupom']) && $GLOBALS['discounted'] == false) {
 
@@ -88,10 +89,10 @@ include '../includes/header.php';
             <strong>$<?= $total ?></strong>
         </li>
     </ul>
-    <div class="row text-center mt-3">
+    <div class="d-flex justify-content-center row text-center mt-3">
         <h2 class="h2 ">Cliente: <?= $cliente ?></h2>
         <p>Deseja finalizar sua compra ?</p>
-        <a class="btn btn-success" href="./check.php">Comprar</a>
+        <a class=" text-white btn btn-success col-lg-5" href="./check.php">Comprar</a>
     </div>
 
 
