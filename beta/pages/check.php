@@ -52,20 +52,10 @@ session_start();
   </head>
   <body class="bg-light">
     
-<div class="container">
-  <main>
-    <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="../images/bootstrap-logo.svg" alt="" width="72" height="57">
-      <h2>IDENTIFICAÇÃO</h2>
-      
-      <p class="lead"></p>
-    </div>
-    <div>
-    <h4 class="mb-3">JÁ TEM LOGIN?</h4>
-    <a class="w-5 btn btn-sm btn-outline-secondary" href="./login.php" type="submit">Faça login</a><br><br>
-    </div>
+    <div class="container d-flex justfy col-md-8">
+    <h4 class="col-mb-3">JÁ TEM LOGIN?</h4>
+    <a class="w-5 btn btn-sm btn-outline-secondary" href="./login.php">Faça login</a><br><br>
 
-    <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
       </div>
       <div class="col-md-7 col-lg-8">
@@ -154,15 +144,9 @@ session_start();
     </div>
   </main>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2021 - Cleide Store</p>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a href="#">Privacy</a></li>
-      <li class="list-inline-item"><a href="#">Terms</a></li>
-      <li class="list-inline-item"><a href="#">Support</a></li>
-    </ul>
-  </footer>
+
 </div>
+<?php include '../includes/footer.php'; ?>
 
 
     <script src="../js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
