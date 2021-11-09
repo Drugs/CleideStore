@@ -4,21 +4,13 @@ include '../database/Connection.php';
 session_start();
 ?>
     
-<<<<<<< Updated upstream
     <div class="container flex justfy col-md-10">
-=======
-    <div class="container d-flex justfy col-ml- col-md-8">
->>>>>>> Stashed changes
 		<div class="row">
 			<h4 class="col-mb-6">JÁ TEM LOGIN?</h4>
 			<a class="w-5 btn btn-sm btn-outline-secondary" href="./login.php">Faça login</a>
 		</div>
-<<<<<<< Updated upstream
 		<div class="row">
 	<div class="col-md-10 col-lg-8">
-=======
-      <div class="col">
->>>>>>> Stashed changes
         <h4 class="mb-3">QUERO ME CADASTRAR</h4>
         <form class="needs-validation" action="" novalidate>
           <div class="row g-3">
