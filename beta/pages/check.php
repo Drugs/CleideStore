@@ -1,4 +1,5 @@
 <?php
+include "../includes/header_dash.php";
 include '../database/Connection.php';
 session_start();
 ?>
