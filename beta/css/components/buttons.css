@@ -7,7 +7,7 @@
   border: 2px solid transparent !important;
   font-size: 1.2rem !important;
   border-radius: 0.4rem !important;
-  color: var(--black-cleide) !important;
+  color: var(--black-cleide)  ;
 }
 
 .btn:hover {

@@ -1,4 +1,5 @@
 <?php
+include '../database/Connection.php';
 session_start();
 ?>
 
@@ -47,14 +48,14 @@ session_start();
 
     
     <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
+    <link href="../css/form-validation.css" rel="stylesheet">
   </head>
   <body class="bg-light">
     
 <div class="container">
   <main>
     <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+      <img class="d-block mx-auto mb-4" src="../images/bootstrap-logo.svg" alt="" width="72" height="57">
       <h2>IDENTIFICAÇÃO</h2>
       
       <p class="lead"></p>
@@ -69,7 +70,7 @@ session_start();
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">QUERO ME CADASTRAR</h4>
-        <form class="needs-validation" novalidate>
+        <form class="needs-validation" action="" novalidate>
           <div class="row g-3">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">Nome</label>
@@ -147,7 +148,7 @@ session_start();
           <hr class="my-4">
 
           
-          <a class="w-100 btn btn-primary btn-lg" href="pagamento.php" type="submit">Continuar Pagamento</a>
+          <a class="w-100 btn btn-success btn-lg" href="login.php" type="submit">Cadastrar</a>
         </form>
       </div>
     </div>
@@ -164,7 +165,7 @@ session_start();
 </div>
 
 
-    <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 
       <script src="form-validation.js"></script>
   </body>

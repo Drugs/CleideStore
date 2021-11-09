@@ -4,7 +4,6 @@ define('TITLE', 'Login');
 define('CSSFILE', '../');
 include '../includes/header.php';
 
-
 ?>
 
 <style>
