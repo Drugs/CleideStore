@@ -48,6 +48,7 @@ include "../includes/header_dash.php";
 		        <label class="control-label">
 			      <input type="radio" data-target="#authOpt2" name="b" value="ids" data-toggle="collapse"> Id do Suporte
 		        </label>
+            </br>
 	        	<label class="control-label">
 				  	<input type="radio" data-target="#authOpt3" class="closeAllCollapse" name="b" value="nome"> Nome do Cliente
 				    </label>

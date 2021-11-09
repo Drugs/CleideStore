@@ -1,4 +1,8 @@
 <!doctype html>
+<?php
+define('TITLE', 'Cleide Store');
+define('CSSFILE', '../');
+?>
 <html lang="pt-br">
 
 <head>

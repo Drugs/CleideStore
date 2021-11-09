@@ -5,11 +5,10 @@ session_start();
 ?>
     
     <div class="container d-flex justfy col-md-8">
-    <h4 class="col-mb-3">JÁ TEM LOGIN?</h4>
-    <a class="w-5 btn btn-sm btn-outline-secondary" href="./login.php">Faça login</a><br><br>
-
-      <div class="col-md-5 col-lg-4 order-md-last">
-      </div>
+		<div class="row">
+			<h4 class="col-mb-3">JÁ TEM LOGIN?</h4>
+			<a class="w-5 btn btn-sm btn-outline-secondary" href="./login.php">Faça login</a>
+		</div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">QUERO ME CADASTRAR</h4>
         <form class="needs-validation" action="" novalidate>
