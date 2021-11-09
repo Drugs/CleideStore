@@ -1,15 +1,15 @@
 <?php
-
+include '../includes/header_dash.php';
 include '../database/Connection.php';
 session_start();
 ?>
     
     <div class="container d-flex justfy col-md-8">
 		<div class="row">
-			<h4 class="col-mb-3">JÁ TEM LOGIN?</h4>
+			<h4 class="col-mb-6">JÁ TEM LOGIN?</h4>
 			<a class="w-5 btn btn-sm btn-outline-secondary" href="./login.php">Faça login</a>
 		</div>
-      <div class="col-md-7 col-lg-8">
+      <div class="col-md- col-lg-8">
         <h4 class="mb-3">QUERO ME CADASTRAR</h4>
         <form class="needs-validation" action="" novalidate>
           <div class="row g-3">
