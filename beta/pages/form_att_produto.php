@@ -3,7 +3,7 @@
 <?php 
 Define ('TITLE' , 'Atualizar informações do Produto');
 Define('CSSFILE' , '../');
-include "../includes/header.php";
+include "../includes/header_dash.php";
 include '../database/Connection.php';
 $consulta = "SELECT * FROM `produto` WHERE id_produto = {$_GET['id']}";
 $resultado = mysqli_query ($connection, $consulta);
@@ -67,7 +67,7 @@ $dados = mysqli_fetch_assoc($resultado);
         </form>
       </div>
     </div>
-    <?php include "../includes/footer.php"; ?>
+    <?php include "../includes/footer_dash.php"; ?>
   </main>
 
  

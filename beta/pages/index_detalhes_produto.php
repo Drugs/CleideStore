@@ -3,7 +3,7 @@
 <?php 
 Define ('TITLE' , 'Detalhes do Produto');
 Define('CSSFILE' , '../');
-include "../includes/header.php";
+include "../includes/header_dash.php";
 include '../database/Connection.php';
 ?>
 <body>
@@ -29,9 +29,10 @@ include '../database/Connection.php';
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Pera lá amigão</h5> 
+        <h5 class="modal-title" id="exampleModalLabel">Atenção</h5> 
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+     
       <div class="modal-body">
         Deseja realmente excluir este produto ?
       </div>
@@ -46,7 +47,7 @@ include '../database/Connection.php';
   <?php include '../functions/cod_detalhes_produtos.php'; ?>
       </div>
     </div>
-    <?php include "../includes/footer.php";?>
+    <?php include "../includes/footer_dash.php";?>
 
     <script src="bootstrap.min.js"></script>
     

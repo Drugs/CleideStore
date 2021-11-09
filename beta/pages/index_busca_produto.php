@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <?php 
 
-Define ('TITLE' , 'Pagina Suporte');
+Define ('TITLE' , 'Resultados da busca');
 Define('CSSFILE' , '../');
-include "../includes/header.php";
+include "../includes/header_dash.php";
 include '../database/Connection.php';
 ?>
 
@@ -16,7 +16,7 @@ include '../database/Connection.php';
 
     </div>
       </div>
-  <?php include "../includes/footer.php";?>
+  <?php include "../includes/footer_dash.php";?>
 
 
   <script src="bootstrap.min.js"></script>

@@ -1,18 +1,18 @@
+<?php 
+Define ('TITLE' , 'Dashboard Produtos');
+Define('CSSFILE' , '../');
+include "../includes/header_dash.php";
+include '../functions/tabela_index_produto.php'; ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<?php 
-Define ('TITLE' , 'Pagina Suporte');
-Define('CSSFILE' , '../');
-include "../includes/header.php";
-include '../functions/tabela_index_produto.php'; ?>
 
 <body>
   <div class="container m-auto">
     <div class="mb-5 mt-4">
       <h1 class="h1 mb-2">Lista de produtos</h1>
      
-            <?php if (isset($_REQUEST['confirmacao'])  and $_GET['confirmacao']=="0" ) {
+        <?php if (isset($_REQUEST['confirmacao'])  and $_GET['confirmacao']=="0" ) {
                 
                 echo "<div class='alert alert-success' role='alert'>
                 Produto adicionado com sucesso
@@ -50,7 +50,7 @@ include '../functions/tabela_index_produto.php'; ?>
     </tbody>
     </table>
 </div>
-<?php include "../includes/footer.php"; ?>
+<?php include "../includes/footer_dash.php"; ?>
   <script src="bootstrap.min.js"></script>
 </body>
 
