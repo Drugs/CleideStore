@@ -1,4 +1,8 @@
 <?php
+<?php
+define('TITLE', 'Carrinho/Cadastro');
+define('CSSFILE', '../');
+?>
 include '../includes/header_dash.php';
 include '../database/Connection.php';
 session_start();
