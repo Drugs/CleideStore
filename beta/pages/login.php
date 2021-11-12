@@ -6,22 +6,6 @@ include '../includes/header.php';
 
 ?>
 
-<style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-</style>
-
 
 <main>
   <div class="container">
@@ -31,24 +15,35 @@ include '../includes/header.php';
 
     <div class="row g-3 ">
 
-      <h4 class="h4 mb-3 text-center">FAÇA LOGIN</h4>
+      <h4 class="h4 mb-3 text-center text-muted">Faça login</h4>
 
-      <form class="needs-validation d-flex flex-wrap flex-column align-content-center align-items-center" action="pagamento.php">
+      <form class="needs-validation d-flex flex-wrap flex-column align-content-center align-items-center" action="../functions/logged.php" method="POST">
 
-        <div class="row w-50">
+        <div class="row">
+          <?php
+          if (isset($_GET['status'])) {
+            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+            <strong>Opaa!</strong> preencha os dados corretamente amigão.
+            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+          </div>";
+          }
+
+
+          ?>
+
           <div class="col-12">
-            <label for="email" class="form-label">Email <span class="text-muted"></span></label>
-            <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
+            <label for="email" class="form-label mb-0">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com">
             <div class="invalid-feedback">
               Por favor insira um email válido.
             </div>
           </div>
 
-          <div class="col-12">
-            <label for="password" class="form-label">Senha <span class="text-muted"></span></label>
-            <input type="password" class="form-control" id="email" placeholder="">
+          <div class="col-12 mt-3">
+            <label for="password" class="form-label mb-0">Senha:</label>
+            <input type="password" class="form-control" id="password" name="password">
             <div class="invalid-feedback">
-              Por favor insira um email válido.
+              Por favor insira uma senha válida.
             </div>
           </div>
         </div>
@@ -61,6 +56,6 @@ include '../includes/header.php';
 </main>
 
 
-<script src="../js/form-validation.js"></script>
+
 
 <?php include '../includes/footer.php'; ?>
