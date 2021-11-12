@@ -1,14 +1,9 @@
 <?php
-<?php
-define('TITLE', 'Carrinho/Cadastro');
-define('CSSFILE', '../');
-?>
 include '../includes/header_dash.php';
 include '../database/Connection.php';
 session_start();
 ?>
-    
-    <div class="container flex justfy col-md-10">
+<div class="container flex justfy col-md-10">
 <form class="needs-validation" action="" novalidate>
         
           <div class="row g-3">
