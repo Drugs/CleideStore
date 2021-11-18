@@ -7,22 +7,24 @@ define('CSSFILE', '../');
 include '../includes/header.php';
 
 
+
 ?>
 
 <div class="container">
+
     <div class="row">
         <!--Imagenszinhas-->
         <div class="col-0 col-sm-0 col-lg-2 d-none d-lg-flex justify-content-center align-content-center">
             <div class="row">
                 <ul class="list-unstyled">
                     <li class="thumbnail">
-                        <img class="rounded-1 thumbnail-image" onclick="changeImage(this)" src="../images/roupa-1.jpg" />
+                        <img class="rounded-1 thumbnail-image" onclick="changeImage(this)" src="../images/products/<?= $product['nameBoy'] ?>/roupa-1.png" />
                     </li>
                     <li class="thumbnail">
-                        <img class="rounded-1 thumbnail-image" onclick="changeImage(this)" src="../images/roupa-2.jpg" />
+                        <img class="rounded-1 thumbnail-image" onclick="changeImage(this)" src="../images/products/<?= $product['nameBoy'] ?>/roupa-2.png" />
                     </li>
                     <li class="thumbnail">
-                        <img class="rounded-1 thumbnail-image" onclick="changeImage(this)" src="../images/roupa-1.jpg" />
+                        <img class="rounded-1 thumbnail-image" onclick="changeImage(this)" src="../images/products/<?= $product['nameBoy'] ?>/roupa-3.png" />
                     </li>
                 </ul>
             </div>
@@ -30,7 +32,7 @@ include '../includes/header.php';
         <!--Foto maior-->
         <div class="col-12 col-sm-6 col-lg-5 justify-content-center">
             <div class="row d-none d-lg-flex">
-                <img class="rounded-1 thumbnail-full" src="../images/roupa-1.jpg" id="main_product_image" />
+                <img class="rounded-1 thumbnail-full" src="../images/products/<?= $product['nameBoy'] ?>/roupa-1.png" id="main_product_image" />
             </div>
             <!--Slider-->
             <div id="caroulsContainer" class="carousel slide d-lg-none" data-bs-ride="carousel">
@@ -55,13 +57,13 @@ include '../includes/header.php';
         <!--Infos produto-->
         <div class="col-12 col-sm-6 col-lg-5 justify-content-center">
             <!--Frete / avaliação-->
-            <div class="row mt-3 mt-md-0 mb-3">
+            <div class="row mt-3 mt-md-0 mb-2">
                 <div class="col-6 col-sm d-flex">
                     <img class="icon col-2" src="../images/icons/freight_icon.svg" alt="icone de frete">
                     <p class="p-title col ms-2 bold">Frete grátis</p>
                 </div>
                 <!--estrelas-->
-                <div class="col-4 col-sm d-flex justify-content-start justify-content-sm-start mb-3 mb-sm-0">
+                <div class="col-4 col-sm d-flex justify-content-start justify-content-sm-start mb-2 mb-sm-0">
                     <img class="icon" src="../images/icons/star_icon.svg" alt="icone de estrela" />
                     <img class="icon ms-1" src="../images/icons/star_icon.svg" alt="icone de estrela" />
                     <img class="icon ms-1" src="../images/icons/star_icon.svg" alt="icone de estrela" />
@@ -76,14 +78,14 @@ include '../includes/header.php';
                 <p class="text-muted ">Até 2x de R$ <?= ceil($product['valor_produto'] / 2) ?></p>
             </div>
             <!--Titulo e descrição-->
-            <div class="row mb-3">
+            <div class="row mb-2">
                 <h1 class="h1 bold text-center mb-3"><?= $product['nome_produto'] ?></h1>
                 <p class="text-black prg-0"><?= $product['desc_produto'] ?></p>
             </div>
             <!--Opções de produto-->
             <div class="row">
                 <!--selecionar tamanho-->
-                <div class="row mt-3">
+                <div class="row mt-2">
                     <p class="col-5 col-sm-4 prg-1 bold text-uppercase">Tamanho:</p>
                     <div class="col">
                         <select class="select-control " name="">
@@ -95,12 +97,12 @@ include '../includes/header.php';
                     </label>
                 </div>
                 <!--Selecionar cor-->
-                <div class="row mt-3">
+                <div class="row mt-2">
                     <p class="col-5 col-sm-2 prg-1 bold text-uppercase">Cor:</p>
                     <div class="col">
                         <select class="select-control " name="">
                             <option value="black">Preto</option>
-                            <option value="white">Branco</option>
+                            <option value="gray">Cinza</option>
                             <option value="red">Vermelho</option>
                         </select>
                     </div>
