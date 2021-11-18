@@ -28,7 +28,7 @@ $userName = NameUser();
                 <a href="../index.php" class="col-12 col-md-2 d-flex align-items-center mb-3 mb-md-0 text-dark text-decoration-none">
                     <strong>Cleide Store</strong>
                 </a>
-                <form class="col mb-3 mb-lg-0 me-sm-5 " action="../pages/listing_products.php" method="GET">
+                <form class="col mb-3 mb-lg-0 me-sm-5 " action="..<?= CSSFILE == '' ? '/beta' : ''; ?>/pages/listing_products.php" method="GET">
                     <input type="search" name="search" class="form-control" placeholder="Pesquise um produto" aria-label="Search">
                 </form>
 
