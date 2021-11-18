@@ -1,12 +1,12 @@
 <?php
-<?php
 define('TITLE', 'Carrinho/Cadastro');
 define('CSSFILE', '../');
-?>
+
 include '../includes/header_dash.php';
 include '../database/Connection.php';
 session_start();
 ?>
+
     
     <div class="container flex justfy col-md-10">
 <form class="needs-validation" action="" novalidate>
@@ -27,7 +27,7 @@ session_start();
                 Ponha um sobrenome válido.
               </div>
             </div>
-
+  
             <div class="col-sm-6">
               <label for="email" class="form-label">Email <span class="text-muted"></span></label>
               <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">

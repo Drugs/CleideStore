@@ -1,15 +1,15 @@
 <?php
 include '../database/Connection.php';
-session_start();
-
-$_SESSION["id"] = "2";
+define('TITLE', 'Carrinho');
+define('CSSFILE', '../');
+include '../includes/header.php';   
 
 $query = "SELECT * FROM pedido 
 JOIN cliente ON pedido.fk_id_cliente = cliente.id_cliente 
 JOIN item_pedido ON item_pedido.fk_id_pedido = pedido.id_pedido 
 JOIN produto ON produto.id_produto = item_pedido.fk_id_produto 
 LEFT JOIN cupom ON cupom.id_cupom = pedido.fk_id_cupom 
-WHERE id_cliente = {$_SESSION['id']}";
+WHERE id_cliente = {$_SESSION['user']['id']}";
 
 $total = 0;
 $cliente = 'Teste';
@@ -35,14 +35,14 @@ function CreateList()
             <li class='list-group-item d-flex justify-content-between lh-sm'>
             <div>
                 <h6 class='my-0'>{$row['nome_produto']}</h6>
-                <small class='text-muted'>{$row['quant_item']} Items de: R$ {$row['valor_produto']}</small>
+                <small class='text-muted'>{$row['quantidade_item']} Items de: R$ {$row['valor_produto']}</small>
             </div>
-            <button class='btn btn-sm btn-outline-secondary' type=''>Adcionar</button>
-            <span class='text-muted'>R$" . $row['valor_produto'] * $row['quant_item'] . "</span>
+            
+            <span class='text-muted'>R$" . $row['valor_produto'] * $row['quantidade_item'] . "</span>
         </li>
             ";
 
-        $GLOBALS['total'] += $row['valor_produto'] * $row['quant_item'];
+        $GLOBALS['total'] += $row['valor_produto'] * $row['quantidade_item'];
 
         if (isset($row['codigo_cupom']) && $GLOBALS['discounted'] == false) {
 
@@ -70,9 +70,6 @@ function ValidateCupom($data_cupom, $valor)
         $GLOBALS['codigo_cupom'] = $GLOBALS['codigo_cupom'] . ' - Expirado';
     }
 }
-define('TITLE', 'Carrinho');
-define('CSSFILE', '../');
-include '../includes/header.php';
 ?>
 <div class="container">
     <ul class='list-group mb-3 mt-5'>
