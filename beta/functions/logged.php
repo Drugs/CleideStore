@@ -18,6 +18,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         //Verifica senha
         $user = mysqli_fetch_assoc($result);
         $correctPass = password_verify($_POST['password'], $user['senha_usuario']);
+        
 
         //Busca cliente por fk id.
         $sql = "SELECT * FROM cliente WHERE id_cliente = '{$user['fk_id_cliente']}'";
@@ -32,3 +33,4 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         }
     }
 }
+

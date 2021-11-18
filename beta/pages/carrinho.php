@@ -4,6 +4,7 @@ define('TITLE', 'Carrinho');
 define('CSSFILE', '../');
 include '../includes/header.php';
 
+
 $query = "SELECT * FROM pedido 
 JOIN cliente ON pedido.fk_id_cliente = cliente.id_cliente 
 JOIN item_pedido ON item_pedido.fk_id_pedido = pedido.id_pedido 
