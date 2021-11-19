@@ -28,6 +28,10 @@ function Alter($comand , $id_item) {
 	if($quanti <= 0){$quanti = 0;}
     $query = "UPDATE item_pedido SET quantidade_item = {$quanti} WHERE id_item_pedido = {$id_item}";
     $result = mysqli_query($GLOBALS['connection'], $query);
+	
+	$query = "SELECT quantidade_item, valor_produto FROM item_pedido JOIN produto on fk_id_produto = id_produto WHERE id_item_pedido = {$id_item}";
+    $result = mysqli_query($GLOBALS['connection'], $query);
+    $row = mysqli_fetch_assoc($result);
 	if($quanti < 0) {
 		$row = 	[
 					"quantidade_item" => 0,
