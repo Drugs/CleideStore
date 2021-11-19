@@ -1,6 +1,7 @@
 <?php
 //saimon
 define('TITLE', 'Listagem de produtos');
+define('CSSFILE', '../');
 include '../functions/search.php';
 include '../includes/header.php';
 
