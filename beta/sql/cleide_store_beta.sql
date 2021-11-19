@@ -15,6 +15,8 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+-- Banco de dados filezin
+
 --
 -- Table structure for table `aula`
 --
@@ -91,7 +93,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (2,'alice do madruga LINDA','at.risus.Nunc@temporbibendum.com','987654321','973-602 Auctor, Av.','2000-09-21'),(3,'madruga carecao LINDO','mail@mail.com','321987654545','123 asdlkmals','1999-10-01'),(4,'vlaliuinasd LINDI','asdasda','092802938640293','653 Ullamcorper, Street','2021-09-14'),(5,'Chloe Mcdowell','erat.neque@Nullam.ca','1321654987','6445 Ornare Rd.','2021-09-14'),(6,'Curran Chaney','sed.orci@turpisnonenim.edu','1321654987','P.O. Box 472, 1369 Accumsan Rd.','2021-09-14'),(7,'Teegan Mann','blandit.congue.In@mi.net','1321654987','P.O. Box 463, 816 Ultrices St.','2021-09-14'),(8,'Libby Chaney','Cras.dolor.dolor@nec.net','1321654987','P.O. Box 652, 6376 Posuere Street','2021-09-14'),(9,'Zachery Hansen','nisi@Nunc.org','1321654987','5952 Fames Rd.','2021-09-14'),(10,'Tyrone English','porttitor.vulputate.posuere@velvulputateeu.net','1321654987','Ap #526-4578 Nunc Rd.','2021-09-14'),(11,'Saimon alcântara bezerra','email@email.com','1321654987','rua sei la , av. invento depois','2021-09-14'),(12,'Usuario de Teste','user@user.com','258369147','1234 maid','2002-02-02'),(16,'maria vai com as outras2','lalala@lalala.co','321987654545','1234 maid','2016-12-31'),(23,'maria vai com as outras5','lalala@lalala.co12','123123123123','1234 maid','2016-12-31'),(26,'maria vai com as outras5','lalala@lalala.co1233','123123123123','1234 maid','2016-12-31'),(28,'maria vai com as outras32','lalala@lalala.co12334','123123123123','1234 maid','2016-12-31'),(32,'maria vai com as marias','maria@airam','21321654987978','321654654987','2001-01-01'),(33,'Admin','adm@adm.com','00000000','Casa do Adm','2021-01-01');
+INSERT INTO `cliente` VALUES (2,'Alice Fernandes','alice@gmail.com','987654321','973-602 Auctor, Av.','2000-09-21'),(3,'madruga carecao LINDO','mail@mail.com','321987654545','123 asdlkmals','1999-10-01'),(4,'vlaliuinasd LINDI','asdasda','092802938640293','653 Ullamcorper, Street','2021-09-14'),(5,'Chloe Mcdowell','erat.neque@Nullam.ca','1321654987','6445 Ornare Rd.','2021-09-14'),(6,'Curran Chaney','sed.orci@turpisnonenim.edu','1321654987','P.O. Box 472, 1369 Accumsan Rd.','2021-09-14'),(7,'Teegan Mann','blandit.congue.In@mi.net','1321654987','P.O. Box 463, 816 Ultrices St.','2021-09-14'),(8,'Libby Chaney','Cras.dolor.dolor@nec.net','1321654987','P.O. Box 652, 6376 Posuere Street','2021-09-14'),(9,'Zachery Hansen','nisi@Nunc.org','1321654987','5952 Fames Rd.','2021-09-14'),(10,'Tyrone English','porttitor.vulputate.posuere@velvulputateeu.net','1321654987','Ap #526-4578 Nunc Rd.','2021-09-14'),(11,'Saimon alcântara bezerra','email@email.com','1321654987','rua sei la , av. invento depois','2021-09-14'),(12,'Usuario de Teste','user@user.com','258369147','1234 maid','2002-02-02'),(16,'maria vai com as outras2','lalala@lalala.co','321987654545','1234 maid','2016-12-31'),(23,'maria vai com as outras5','lalala@lalala.co12','123123123123','1234 maid','2016-12-31'),(26,'maria vai com as outras5','lalala@lalala.co1233','123123123123','1234 maid','2016-12-31'),(28,'maria vai com as outras32','lalala@lalala.co12334','123123123123','1234 maid','2016-12-31'),(32,'maria vai com as marias','maria@airam','21321654987978','321654654987','2001-01-01'),(33,'Admin','adm@adm.com','00000000','Casa do Adm','2021-01-01');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -170,7 +172,7 @@ CREATE TABLE `item_pedido` (
 
 LOCK TABLES `item_pedido` WRITE;
 /*!40000 ALTER TABLE `item_pedido` DISABLE KEYS */;
-INSERT INTO `item_pedido` VALUES (1,41,1,2),(2,42,1,2),(3,43,1,2),(4,44,1,2);
+INSERT INTO `item_pedido` VALUES (1,47,1,2),(2,48,1,1),(3,49,1,2),(4,50,1,2);
 /*!40000 ALTER TABLE `item_pedido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -278,7 +280,7 @@ CREATE TABLE `usuario` (
   `nivel_usuario` int NOT NULL,
   PRIMARY KEY (`id_usuario`),
   KEY `fk_id_cliente` (`fk_id_cliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -287,7 +289,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,33,'adm@adm.com','$2y$10$S4UkDCiKS.zQ/d8kYbFYROsLKQJ1ZDCGZZI1szobvqIVvXvMKr1.C',2),(2,12,'user@user.com','$2y$10$RsvNxp1SvUikEM5x296OcO2Z0Lwn2DxGye.VcEh1sbU/veyhHZobO',1);
+INSERT INTO `usuario` VALUES (1,33,'adm@adm.com','$2y$10$S4UkDCiKS.zQ/d8kYbFYROsLKQJ1ZDCGZZI1szobvqIVvXvMKr1.C',2),(2,12,'user@user.com','$2y$10$RsvNxp1SvUikEM5x296OcO2Z0Lwn2DxGye.VcEh1sbU/veyhHZobO',1),(3,2,'alice@gmail.com','$2y$10$RsvNxp1SvUikEM5x296OcO2Z0Lwn2DxGye.VcEh1sbU/veyhHZobO',1);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -300,4 +302,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-18 17:45:35
+-- Dump completed on 2021-11-18 20:57:42
