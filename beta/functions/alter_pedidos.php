@@ -21,21 +21,14 @@ function Alter($comand , $id_item) {
     $result = mysqli_query($GLOBALS['connection'], $query);
     $row = mysqli_fetch_assoc($result);
     $quanti = $row['quantidade_item'];
-    $valor = $row['valor_produto'];
-    
+    if ($quanti == 0 and $comand == 'Remo') {
+        return false;
+    }
     $comand == "Add" ? $quanti++ : $quanti-- ;
 
-	if($quanti <= 0){$quanti = 0;}
+
     $query = "UPDATE item_pedido SET quantidade_item = {$quanti} WHERE id_item_pedido = {$id_item}";
-    $result = mysqli_query($GLOBALS['connection'], $query);
-	if($quanti < 0) {
-		$row = 	[
-					"quantidade_item" => 0,
-					"valor_produto" => $valor,
-				];
-        echo json_encode($row);
-		die();
-    }
+    $result = mysqli_query($GLOBALS['connection'], $query); 
     echo json_encode($row);
 }
 
