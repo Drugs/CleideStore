@@ -7,6 +7,10 @@ $consulta = "SELECT * FROM suporte
 left join cliente on suporte.fk_id_cliente = cliente.id_cliente
 where `id_suporte` = '{$id}' or cliente.nome_cliente like '%{$id}%' or fK_id_pedido = '{$id}'";
 $resultado= mysqli_query($connection, $consulta);
+if (mysqli_num_rows($resultado) == 0) {
+      define('SEARCHRESULT', 'Nenhum resultado encontrado');
+    } else {
+      define('SEARCHRESULT', 'Resultados da sua pesquisa');
 while ($dados = mysqli_fetch_array($resultado)) { 
       $row [] = $dados;
       $itens = count($row);
@@ -31,4 +35,5 @@ echo "
 ";
 $a++;
 }
+    }
 ?>

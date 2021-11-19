@@ -4,10 +4,15 @@ $a = 0;
 $id = $_POST['busca'];
 $consulta = "SELECT * FROM `produto` WHERE `id_produto` = '{$id}' or `nome_produto` LIKE '%{$id}%';"; 
 $resultado_consulta = mysqli_query($connection, $consulta);
-while ($resultado = mysqli_fetch_array($resultado_consulta)){
-      $dados [] = $resultado;
-      $itens = count($dados);
-}
+if (mysqli_num_rows($resultado_consulta) == 0) {
+  define('SEARCHRESULT', 'Nenhum resultado encontrado');
+} else {
+  define('SEARCHRESULT', 'Resultados da sua pesquisa');
+
+    while ($resultado = mysqli_fetch_array($resultado_consulta)){
+          $dados [] = $resultado;
+          $itens = count($dados);
+     }
   while ($a < $itens){
     echo "
     <div id='card'class='card mx-1 col-sm-3 mb-3 p-0'>
@@ -24,5 +29,9 @@ while ($resultado = mysqli_fetch_array($resultado_consulta)){
     </div>
     </div>";
     $a++;
+  
+  }
+}
     
-  }?>
+
+    ?>
