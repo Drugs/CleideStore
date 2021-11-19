@@ -114,7 +114,7 @@ function ValidateCupom($data_cupom, $valor)
                 let dados = JSON.parse(this.responseText)
                 console.log(dados);
                 quanti.innerHTML = dados['quantidade_item'] + " Items de: R$  " + dados['valor_produto']
-                valortotal.innerHTML = dados['quantidade_item'] * dados['valor_produto']
+                valortotal.innerHTML = " R$  " + dados['quantidade_item'] * dados['valor_produto']
                 
 			}
 		}
