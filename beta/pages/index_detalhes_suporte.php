@@ -10,7 +10,8 @@ include "../includes/header_dash.php";
 <body>
   <div class="container m-auto">
     <div class="mb-5 mt-4">
-      <h1 class="h1 mb-2">Detalhes Suporte</h1>
+      <a class= "btn btn-green mb-4"href="../pages/index_suporte.php">Voltar</a>
+      <h1 class="h1 mb-2">Detalhes Suporte</h1></br></br>
             <?php
             if (isset($_REQUEST['confirmacao'])  and $_GET['confirmacao']=="2" ) {
               echo "<div class='alert alert-warning' role='alert'>

@@ -1,16 +1,22 @@
 <?php 
 Define ('TITLE' , 'Dashboard Produtos');
 Define('CSSFILE' , '../');
-include "../includes/header_dash.php";
-include '../functions/tabela_index_produto.php'; ?>
+include "../includes/header_dash_p.php";
+ ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+<style> 
+#card {
+  width: 22%;
+}
+</style>
 
 <body>
   <div class="container m-auto">
     <div class="mb-5 mt-4">
-      <h1 class="h1 mb-2">Lista de produtos</h1>
+    
+      <h1 class="text-center h1 mb-4">Lista de produtos</h1>
      
         <?php if (isset($_REQUEST['confirmacao'])  and $_GET['confirmacao']=="0" ) {
                 
@@ -25,30 +31,16 @@ include '../functions/tabela_index_produto.php'; ?>
                 Produto excluído com sucesso
                 </div>";
             
-            } else {
-             
-              echo "<h5> Olá, seja bem-vindo! </h5> </br>";
-             
-             };?>
-
-        <a class='btn btn-success' href='form_add_produto.php'>Adicionar produto</a>
-        <a class='btn btn-success' href='form_busca_produto.php'>Busca </a>
+            }?>
+    <div class= "row d-flex justify-content-center">
+      <div class= "col-sm-3">
+        <a class='btn btn-green' href='form_add_produto.php'>Adicionar produto</a>
     </div>
-    <table class="table table-light table-striped table-bordered table-hover">
-    <thead class="text-center text-uppercase">
-    <tr>
-      <th>Nome</th>
-      <th>Descrição</th>
-      <th>valor</th>
-      <th>Tamanho</th>
-      <th>Cor</th>
-      <th>Ação</th>
-   </tr>
-   </thead>
-   <tbody class="text-center">
-      <?php Select("produto"); ?>
-    </tbody>
-    </table>
+          </div>
+    </div>
+     <div class= "row d-flex justify-content-center">
+       <?php include '../functions/tabela_index_produto.php';?>
+   </div>
 </div>
 <?php include "../includes/footer_dash.php"; ?>
   <script src="bootstrap.min.js"></script>

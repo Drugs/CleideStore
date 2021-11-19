@@ -2,7 +2,8 @@
 include '../database/Connection.php';
 define('TITLE', 'Carrinho');
 define('CSSFILE', '../');
-include '../includes/header.php';   
+include '../includes/header.php';
+
 
 $query = "SELECT * FROM pedido 
 JOIN cliente ON pedido.fk_id_cliente = cliente.id_cliente 

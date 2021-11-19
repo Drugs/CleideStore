@@ -61,7 +61,7 @@ $dados = mysqli_fetch_assoc($resultado);
               <input type="hidden" id="custId" name="id" value=<?php echo $_GET['id']?>>
               <hr class="my-4 col-lg-12">
         <div class="row justify-content-center">
-              <button class="w-100 btn btn-primary btn-lg " type="submit">Atualizar</button>
+              <button class="w-100 btn btn-green btn-lg " type="submit">Atualizar</button>
         </div>
 
         </form>
