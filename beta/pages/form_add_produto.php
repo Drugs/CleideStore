@@ -60,7 +60,7 @@ include '../database/Connection.php';
             <input type="file" accept= "imaage" name= "img" id="file">
             <hr class="my-4 col-lg-12">
           <div class= "row justify-content-center">
-            <button class="w-100 btn btn-primary btn-lg " type="submit">Adicionar produto</button>
+            <button class="w-100 btn btn-green btn-lg " type="submit">Adicionar produto</button>
           </div>
 
         </form>

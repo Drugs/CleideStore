@@ -37,14 +37,15 @@ include '../database/Connection.php';
         Deseja realmente excluir este produto ?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Não</button>
-        <a class="btn btn-danger"  href='../functions/cod_delete_produto.php?<?php echo "id={$_GET['id']}"?>'>Sim</a>
+        <button type="button" class="btn btn-gray" data-bs-dismiss="modal">Não</button>
+        <a class="btn btn-pink"  href='../functions/cod_delete_produto.php?<?php echo "id={$_GET['id']}"?>'>Sim</a>
       </div>
     </div>
   </div>
 </div>
-
+    <div class='row d-flex justify-content-center'>
   <?php include '../functions/cod_detalhes_produtos.php'; ?>
+      </div>
       </div>
     </div>
     <?php include "../includes/footer_dash.php";?>

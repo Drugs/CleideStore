@@ -21,8 +21,8 @@
                 <a href="../index.php" class="col-12 col-md-2 d-flex align-items-center mb-3 mb-md-0 text-dark text-decoration-none">
                     <strong>Cleide Store</strong>
                 </a>
-                <form class="col mb-3 mb-lg-0 me-sm-5 " action="../pages/relatorio_busca_suporte.php" method="POST">
-                    <input type="search" name="cliente" class="form-control" placeholder="Pesquise um produto" aria-label="Search">
+                <form class="col mb-3 mb-lg-0 me-sm-5 " action="../pages/index_busca_produto.php" method="POST">
+                    <input type="search" name="busca" class="form-control" placeholder="Pesquise um produto" aria-label="Search">
                 </form>
                 <div class="col-2 col-sm-1 ms-4 ms-sm-0 dropdown text-end">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="true">

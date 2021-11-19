@@ -12,52 +12,52 @@ $consulta = mysqli_query($connection, $query);
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
+<style> 
+#card {
+  width: 22%;
+}
+</style>
 <body>
-<div class="container m-auto">
+<div class="container">
   <div class="mb-5 mt-4">
 
-      <h1>Lista de suportes </h1></br>
+      <h1 class= "text-center">Lista de suportes </h1></br>
       
     <main>
-      <div class= "">
-        <div class="col-lg-4" >
-        <a href="form_busca_suporte.php " class= "btn btn-success">Buscar por suporte</a> 
-      </div>
-  </div>
-  </br>
-
-
-  <table class="table table-light table-striped table-bordered table-hover">
-    <tr>
-      <td scope="col">Nome</td>
-      <td scope="col">Id do pedido</td>
-      <td scope="col">Data do suporte</td>
-      <td scope="col">Status do suporte</td> 
-      <td scope="col" >Ações</td>
-    </tr>
-
+</br>
+  <div class='row gx-5 justify-content-center'>
     <?php
     $a = 0;
-    $b = 10;
+    $b = 30;
     while($dado = mysqli_fetch_array($consulta) and $a < $b){
           $parada [] = $dado;
     ?> 
     <?php 
     echo
-    "<tr>     
-      <td> {$dado['nome_cliente']} </td>
-      <td> {$dado['fk_id_pedido']}</td>
-      <td>  {$dado['data_suporte']} </td>
-      <td>  {$dado['status_suporte']} </td>
-      <td>
-      <a type='button' class='btn btn-success' href=  'index_detalhes_suporte.php?id={$dado["id_suporte"]}&teste={$dado["fk_id_pedido"]}'> Detalhes</a>
-      </td>
-    </tr>";
-    $a++;
+    "
+     
+        <div id='card'class='card mx-1 col-sm-3 mb-3 p-0'>
+           <div class='card-header'>{$dado["nome_cliente"]}</div>
+          <div class='card-body'>
+            <p class='card-text'>
+            Id do pedido: {$dado["fk_id_pedido"]}</br>
+            Data do pedido: {$dado["data_suporte"]}</br>
+            Status do suporte: {$dado["status_suporte"]}</br>
+            </p>
+            <div class= 'row  justify-content-center'>
+            <a type='button' class='w-50 btn btn-green' href=  'index_detalhes_suporte.php?id={$dado["id_suporte"]}&teste={$dado["fk_id_pedido"]}'> Detalhes</a>
+          </div>
+        </div>
+      </div>
+    
+   
+        ";
+     $a++;
+        
     ?>
     <?php } ?>
-  </table>
+ 
+ </div>
   </div>
 </div>
 <?php include "../includes/footer_dash.php";?>
