@@ -29,24 +29,30 @@ function CreateList()
     <div>
     <h6>Produto</h6>
     </div>";
+    $a = 0;
     while ($row = mysqli_fetch_assoc($GLOBALS['result'])) {
+        $a++;
         $GLOBALS['cliente'] = $row['nome_cliente'];
         echo "
             
             <li class='list-group-item d-flex justify-content-between lh-sm'>
             <div>
                 <h6 class='my-0'>{$row['nome_produto']}</h6>
-                <small class='text-muted'>{$row['quantidade_item']} Items de: R$ {$row['valor_produto']}</small>
+                <small id='quanti{$a}' class='text-muted'>{$row['quantidade_item']} Items de: R$ {$row['valor_produto']}</small>
             </div>
+
             
-            <span class='text-muted'>R$" . $row['valor_produto'] * $row['quantidade_item'] . "</span>
+            <button class='btn btn-sm- btn-pink' onclick=\"Alter({$row['id_item_pedido']}, 'Remo', {$a})\">-</button>
+            <button class='btn btn-sm- btn-green' onclick=\"Alter({$row['id_item_pedido']}, 'Add', {$a})\">+</button>
+                        
+            <span id='valortotal{$a}' class='text-muted'>R$" . $row['valor_produto'] * $row['quantidade_item'] . "</span>
         </li>
             ";
 
         $GLOBALS['total'] += $row['valor_produto'] * $row['quantidade_item'];
 
         if (isset($row['codigo_cupom']) && $GLOBALS['discounted'] == false) {
-
+                
             $GLOBALS['discounted'] = true;
             $GLOBALS['codigo_cupom'] = $row['codigo_cupom'];
             ValidateCupom($row['d_limite_cupom'], $row['valor_cupom']);
@@ -80,7 +86,7 @@ function ValidateCupom($data_cupom, $valor)
                 <h6 class="my-0">Cupom de desconto</h6>
                 <small><?= $codigo_cupom ?></small>
             </div>
-            <span class="text-<?= $text_status ?>">−R$ <?= $desconto_cupom ?></span>
+            <span id="" class="text-<?= $text_status ?>">−R$ <?= $desconto_cupom ?></span>
         </li>
         <li class="list-group-item d-flex justify-content-between">
             <span>Total:</span>
@@ -95,4 +101,27 @@ function ValidateCupom($data_cupom, $valor)
 
 
 </div>
+<script >
+
+	function Alter(id_item, comand, a) {
+        let quanti = document.getElementById("quanti"+a)
+        let valortotal = document.getElementById("valortotal"+a)
+       console.log(id_item, comand)
+		let xmlhttp = new XMLHttpRequest()
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				//esse é o código
+                let dados = JSON.parse(this.responseText)
+                console.log(dados);
+                quanti.innerHTML = dados['quantidade_item'] + " Items de: R$  " + dados['valor_produto']
+				let multi = dados['quantidade_item'] * dados['valor_produto']
+                valortotal.innerHTML = " R$  " + parseFloat(multi).toFixed(2)
+                
+			}
+		}
+		xmlhttp.open("GET","../functions/alter_pedidos.php?comand="+comand+"&id="+id_item,true)
+		xmlhttp.send()
+	}
+
+</script>
 <?php include '../includes/footer.php'; ?>

@@ -10,12 +10,13 @@ $resultado = mysqli_query ($connection, $consulta);
 $dados = mysqli_fetch_assoc($resultado);
 ?>
 <body class="bg-light">
-
+<div class= "container m-auto">
+<a class= "btn btn-green "href="../pages/index_suporte.php">Voltar</a></br></br>
+</div>
 <div class="d-flex justify-content-center container">
   <main>
     <div>
-     
-      <div class=" r col-md-7 col-lg-12">
+      <div class="col-md-7 col-lg-12">
     </br>
     </br>
        <h4 class=" text-center mb-3">Atualizar informações do suporte</h4> 
@@ -57,7 +58,7 @@ $dados = mysqli_fetch_assoc($resultado);
          
           <hr class="my-4 col-lg-12">
           <div class= "row justify-content-center">
-            <button class="w-100 btn btn-primary btn-lg " type="submit">Atualizar</button>
+            <button class="w-100 btn btn-primary btn-lg btn-green" type="submit">Atualizar</button>
           </div>
 
         </form>

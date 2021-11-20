@@ -7,35 +7,49 @@ $dados = mysqli_fetch_assoc($resultado);
 $row = $dados;
 
 echo "
-    <h3> Informações do Produto </h3>
-    <table class='table table-light table-striped table-bordered table-hover'>
-    <thead class='text-center text-uppercase'>
-    <tr>
-      <th>Nome</th>
-      <th>Descrição</th>
-      <th>Tamanho</th>
-      <th>Cor</th>
-      <th>Valor</th>
-    
+<div class='col-sm-4'>
+<h3 class= 'mb-4'>Informações do Produto:</h3>
+<ul class='list-group'>
+<li class='list-group-item d-flex'>
+<div class='ms-2'>
+ <div class='fw-bold'>Nome:</div>
+  {$row['nome_produto']}
+</div>
+</li>
+<li class='list-group-item d-flex'>
+<div class='ms-2'>
+<div class='fw-bold'>Descrição:</div>
+{$row['desc_produto']}
+</div>
+</li>
+<li class='list-group-item d-flex'>
+<div class='ms-2'>
+ <div class='fw-bold'>Valor:</div>
+ {$row['valor_produto']}
+</div>
+</li>
+<li class='list-group-item d-flex'>
+<div class='ms-2'>
+<div class='fw-bold'> Tamanho:</div>
+{$row['tamanho_produto']}
+</div>
+</li>
+<li class='list-group-item d-flex'>
+<div class='ms-2'>
+<div class='fw-bold'> Cor:</div>
+{$row['cor_produto']}
+</div>
+</li>
 
+</ul>
+</div>
 
-    </tr>
-    </thead>
-    <tbody class='text-center'>
-    <tr>
-      <td>{$row['nome_produto']}</td>
-      <td>{$row['desc_produto']}</td>
-      <td>{$row['tamanho_produto']}</td>
-      <td>{$row['cor_produto']}</td>
-      <td>{$row['valor_produto']}</td>
-    </tbody>
-    </table>
-    <div class= 'd-flex justify-content-center'>
-      <a class='btn btn-warning' href='form_att_produto.php?id={$row['id_produto']}'>Editar</a>
+    <div class= '  mt-5 d-flex justify-content-center'>
+      <a class='btn btn-yellow' href='form_att_produto.php?id={$row['id_produto']}'>Editar</a>
     <div class= 'col-lg-3'> 
     </div>
   
-<button type='button' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#rapadura'>
+<button type='button' class='btn btn-pink' data-bs-toggle='modal' data-bs-target='#rapadura'>
 Deletar
 </button>
 
