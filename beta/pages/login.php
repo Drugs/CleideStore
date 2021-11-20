@@ -49,8 +49,12 @@ include '../includes/header.php';
         </div>
 
         <button type="submit" class="btn btn-green btn-lg mt-3 mb-4">Logar</button>
-
       </form>
+
+      <div class="row justify-content-center ">
+        <a href="cadastro.php" class="btn btn-sm prg-tiny mt-0">Criar nova conta</a>
+      </div>
+
     </div>
   </div>
 </main>
