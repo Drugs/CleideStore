@@ -40,9 +40,9 @@ function CreateList()
                 <h6 class='my-0'>{$row['nome_produto']}</h6>
                 <small id='quanti{$a}' class='text-muted'>{$row['quantidade_item']} Items de: R$ {$row['valor_produto']}</small>
             </div>
-            <div>
-            <button id='csgo' class='btn btn-sm- btn-pink' onclick=\"Alter({$row['id_item_pedido']}, 'Remo', {$a})\">-</button>
-            <button id='csgoo' class='btn btn-sm- btn-green' onclick=\"Alter({$row['id_item_pedido']}, 'Add', {$a})\">+</button>
+            <div id='cssr'>
+            <button class='btn btn-sm- btn-pink' onclick=\"Alter({$row['id_item_pedido']}, 'Remo', {$a})\">-</button>
+            <button class='btn btn-sm- btn-green' onclick=\"Alter({$row['id_item_pedido']}, 'Add', {$a})\">+</button>
             </div>          
             <span id='valortotal{$a}' class='text-muted'>R$" . $row['valor_produto'] * $row['quantidade_item'] . "</span>
         </li>
