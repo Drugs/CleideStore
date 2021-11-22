@@ -65,7 +65,7 @@ function MenuControl($logged, $cssFile)
         return "
         <li><a class='dropdown-item' href='{$cssFile}'>Minha conta</a></li>
         <li><a class='dropdown-item' href='{$cssFile}'>Pedidos</a></li>
-        <li><a class='dropdown-item' href='{$cssFile}pages/carrinho.php'>Dashboard</a></li>
+        <li><a class='dropdown-item' href='{$cssFile}pages/dashboard.html'>Dashboard</a></li>
 
         <li>
             <hr class='dropdown-divider'>
