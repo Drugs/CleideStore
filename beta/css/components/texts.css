@@ -25,3 +25,29 @@ h5 {
 .bold {
   font-weight: bold;
 }
+
+/* ===== PARAGRAFOS =====*/
+
+/* Tamanho minusculo para paragrafos*/
+.prg-tiny {
+  color: var(--black-cleide);
+  font-size: 0.75rem !important;
+}
+
+/* Tamanho pequeno para paragrafos*/
+.prg-0 {
+  color: var(--black-cleide);
+  font-size: 1rem !important;
+}
+
+/* Tamanho padrao para paragrafos*/
+.prg-1 {
+  color: var(--black-cleide);
+  font-size: 1.15rem !important;
+}
+
+/* Tamanho grande para paragrafos*/
+.prg-2 {
+  color: var(--black-cleide);
+  font-size: 1.3rem !important;
+}

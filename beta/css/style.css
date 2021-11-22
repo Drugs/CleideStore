@@ -26,32 +26,6 @@ body {
   color: var(--blue-light-cleide);
 }
 
-/* ===== PARAGRAFOS =====*/
-
-/* Tamanho minusculo para paragrafos*/
-.prg-tiny {
-  color: var(--black-cleide);
-  font-size: 0.75rem;
-}
-
-/* Tamanho pequeno para paragrafos*/
-.prg-0 {
-  color: var(--black-cleide);
-  font-size: 1rem;
-}
-
-/* Tamanho padrao para paragrafos*/
-.prg-1 {
-  color: var(--black-cleide);
-  font-size: 1.15rem;
-}
-
-/* Tamanho grande para paragrafos*/
-.prg-2 {
-  color: var(--black-cleide);
-  font-size: 1.3rem;
-}
-
 /* ===== CARROSEIS =====*/
 .thumbnail:not(:last-of-type) {
   margin-bottom: 20px;
@@ -73,6 +47,7 @@ body {
 }
 
 /* ===== ALEATORIOS =====*/
+
 .shadow-clear {
   box-shadow: 0px 0px 10px rgb(0 0 0 / 15%);
 }
@@ -91,6 +66,16 @@ body {
   background-image: url("../images/adverts/ad_magalu.png");
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
 /* ========== DEIXAR ALGUNS PARANAUE RESPONSIVO ==========*/
 @media (max-width: 576px) {
   .ad {
@@ -102,4 +87,9 @@ body {
   .ad-magalu {
     background-image: url("../images/adverts/ad_magalu_mb.png");
   }
+}
+
+#cssr {
+position: absolute;
+margin-left: 47%;
 }

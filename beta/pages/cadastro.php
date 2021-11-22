@@ -1,166 +1,91 @@
-<?php session_start();
-include_once('Connection.php');
+<?php
 
-//echo "ninguém mandou";
-
-
-
-if (isset($_POST['submit'])) {
-
-    //echo "alguem mandou ";
-
-    $iclient = $_POST['nome_cliente'];
-    $email = $_POST['email_cliente'];
-    $senha = $_POST['senha_cliente'];
-
-    $consulta = "INSERT INTO cliente (nome_cliente, email_cliente, senha_cliente) VALUES ($iclient, '$email', '$senha')";
-    $result = mysqli_query($mysqli, $consulta);
-
-
-    //Para cadastrar, formulário, puxar os imputs das tabelas do bd;
-    //Post pra frente, pegar dados e fazer consulta;
-    //tiver tudo certo, manda pro relatório.
-
-
-    //Imprimir as variáveis e verificar se os nomes estão todos (OK).
-
-    //where client_id = {$id};
-    //";
-    #echo $consulta; //(Escrever a consulta e testar no Banco de Dados).
-
-    $result = mysqli_query($mysqli, $consulta);
-
-    if ($result == true) {
-        include_once('index.php');
-        die();
-    }
-}
-
+define('TITLE', 'Criar conta');
+define('CSSFILE', '../');
+include '../includes/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro </title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
-        }
+<main>
+    <div class="container">
+        <h3 class="h3 mb-3 text-center bold">Crie sua conta</h3>
 
-        .box {
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            border-radius: 15px;
-            width: 20%;
-        }
+        <div class="row g-3 ">
 
-        fieldset {
-            border: 3px solid dodgerblue;
-        }
+            <form class="needs-validation d-flex flex-wrap flex-column align-content-center align-items-center" action="../functions/register.php" method="POST">
 
-        legend {
-            border: 1px solid dodgerblue;
-            padding: 10px;
-            text-align: center;
-            background-color: dodgerblue;
-            border-radius: 8px;
-        }
+                <div class="row">
+                    <?php
+                    if (isset($_GET['status'])) {
+                        if ($_GET['status'] == "exists") {
+                            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                <strong>Opaa!</strong> conta existente.
+                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+                            </div>";
+                        }
 
-        .inputBox {
-            position: relative;
-        }
+                        if ($_GET['status'] == "kid") {
+                            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                <strong>Opaa!</strong> precisa ser maior de idade.
+                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+                            </div>";
+                        }
 
-        .inputUser {
-            background: none;
-            border: none;
-            border-bottom: 1px solid white;
-            outline: none;
-            color: white;
-            font-size: 15px;
-            width: 100%;
-            letter-spacing: 2px;
-        }
+                        if ($_GET['status'] == "error") {
+                            echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                                <strong>Opaa!</strong> algo de errado não está certo amigão.
+                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+                            </div>";
+                        }
 
-        .labelInput {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            pointer-events: none;
-            transition: .5s;
-        }
+                        if ($_GET['status'] == "success") {
+                            echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                                <strong>Eba!</strong> cadastrado com sucesso.
+                                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button>
+                            </div>";
+                        }
+                    }
+                    ?>
 
-        .inputUser:focus~.labelInput,
-        .inputUser:valid~.labelInput {
-            top: -20px;
-            font-size: 12px;
-            color: dodgerblue;
-        }
+                    <div class="col-12 col-sm-6 col-md-6 mt-3 mt-sm-0">
+                        <label for="nome" class="form-label mb-0">Nome:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Fernando Santana" required>
+                    </div>
 
-        #data_nascimento {
-            border: none;
-            padding: 8px;
-            border-radius: 10px;
-            outline: none;
-            font-size: 15px;
-        }
+                    <div class="col-12 col-sm-6 col-md-3 mt-3 mt-sm-0">
+                        <label for="cpf" class="form-label mb-0">Cpf:</label>
+                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Sem pontos ou traços" maxlength="11" required>
+                    </div>
 
-        #submit {
-            background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
-            width: 100%;
-            border: none;
-            padding: 15px;
-            color: white;
-            font-size: 15px;
-            cursor: pointer;
-            border-radius: 10px;
-        }
+                    <div class="col-12 col-sm-4 col-md-3 mt-3 mt-sm-3 mt-md-0">
+                        <label for="dnasc" class="form-label mb-0">D. Nasc:</label>
+                        <input type="date" class="form-control" id="dnasc" name="dnasc" required>
+                    </div>
 
-        #submit:hover {
-            background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
-        }
-    </style>
-</head>
+                    <div class="col-12 col-sm-8 col-md-12 mt-3 mt-sm-3">
+                        <label for="ende" class="form-label mb-0">Endereço:</label>
+                        <input type="text" class="form-control" id="ende" name="ende" placeholder="Bairro tal, rua tal, numero tal" maxlength="100" required>
+                    </div>
 
-<body> <a href="index.php?p=inicial">Voltar</a>
-    <div class="box">
-        <form action="" method="POST">
-            <fieldset>
-                <legend><b>Cadastro de Cliente</b></legend>
-                <br>
-                <div class="inputBox">
-                    <input type="text" name="text" id="nome_cliente" class="inputUser" required>
-                    <label for="nome_cliente" class="labelInput">Nome Completo</label>
+                    <div class="col-12 col-sm-6 mt-3">
+                        <label for="email" class="form-label mb-0">E-mail:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@exemplo.com" required>
+                    </div>
+
+                    <div class="col-12 col-sm-6 mt-3">
+                        <label for="senha" class="form-label mb-0">Senha:</label>
+                        <input type="password" class="form-control" id="senha" name="senha" placeholder="" required>
+                    </div>
+
                 </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="email" name="email_cliente" id="email_cliente" class="inputUser" required>
-                    <label for="email_cliente" class="labelInput">Email</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="senha_cliente" id="senha_cliente" class="inputUser" required>
-                    <label for="senha_cliente" class="labelInput">Senha</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="number" name="cpf_cliente" id="cpf_cliente" class="inputUser" required>
-                    <label for="cpf_cliente" class="labelInput">CPF</label>
-                </div>
-                <br><br>
 
-                <input type="submit" name="submit" value="Cadastre-se" id="submit"><br><br>
-            </fieldset>
-        </form>
+                <button type="submit" class="btn btn-green btn-lg mt-3 mb-4">Registrar</button>
+            </form>
+
+
+        </div>
     </div>
-</body>
+</main>
 
-</html>
+
+
+<?php include '../includes/footer.php'; ?>
