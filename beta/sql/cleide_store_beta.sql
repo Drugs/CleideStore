@@ -152,7 +152,7 @@ CREATE TABLE `item_pedido` (
   PRIMARY KEY (`id_item_pedido`),
   KEY `fk_id_produto` (`fk_id_produto`),
   KEY `fk_id_pedido` (`fk_id_pedido`),
-  CONSTRAINT `chavezinha feliz` FOREIGN KEY (`fk_id_pedido`) REFERENCES `pedido` (`id_pedido`)
+  CON-STRAINT `chavezinha feliz` FOREIGN KEY (`fk_id_pedido`) REFERENCES `pedido` (`id_pedido`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

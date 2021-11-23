@@ -1,13 +1,16 @@
 <?php
 include '../database/Connection.php';
-session_start();
-$id = $_GET['id'];
+define('TITLE', 'Carrinho');
+define('CSSFILE', '../');
+include '../includes/header.php';
+
+
 $query = "SELECT * FROM pedido 
 JOIN cliente ON pedido.fk_id_cliente = cliente.id_cliente 
 JOIN item_pedido ON item_pedido.fk_id_pedido = pedido.id_pedido 
 JOIN produto ON produto.id_produto = item_pedido.fk_id_produto 
 LEFT JOIN cupom ON cupom.id_cupom = pedido.fk_id_cupom 
-WHERE id_cliente = {$id}";
+WHERE id_cliente = {$_SESSION['user']['id']}";
 
 $total = 0;
 $cliente = 'Teste';
@@ -15,7 +18,7 @@ $data_cupom = '';
 $desconto_cupom = 0;
 $codigo_cupom = '';
 $text_status = 'success';
-$discounted = false; 
+$discounted = false;
 
 $result = mysqli_query($GLOBALS['connection'], $query);
 
@@ -26,29 +29,31 @@ function CreateList()
     <div>
     <h6>Produto</h6>
     </div>";
+    $a = 0;
     while ($row = mysqli_fetch_assoc($GLOBALS['result'])) {
+        $a++;
         $GLOBALS['cliente'] = $row['nome_cliente'];
         echo "
             
             <li class='list-group-item d-flex justify-content-between lh-sm'>
             <div>
                 <h6 class='my-0'>{$row['nome_produto']}</h6>
-                <small class='text-muted'>{$row['quant_item']} Items de: R$ {$row['valor_produto']}</small>
+                <small id='quanti{$a}' class='text-muted'>{$row['quantidade_item']} Items de: R$ {$row['valor_produto']}</small>
             </div>
             
-            <span class='text-muted'>R$" . $row['valor_produto'] * $row['quant_item'] . "</span>
+            <span id='valortotal{$a}' class='text-muted'>R$" . $row['valor_produto'] * $row['quantidade_item'] . "</span>
         </li>
             ";
 
-        $GLOBALS['total'] += $row['valor_produto'] * $row['quant_item'];
+        $GLOBALS['total'] += $row['valor_produto'] * $row['quantidade_item'];
 
         if (isset($row['codigo_cupom']) && $GLOBALS['discounted'] == false) {
-
+                
             $GLOBALS['discounted'] = true;
             $GLOBALS['codigo_cupom'] = $row['codigo_cupom'];
             ValidateCupom($row['d_limite_cupom'], $row['valor_cupom']);
         }
-    } 
+    }
 }
 
 function ValidateCupom($data_cupom, $valor)
@@ -68,69 +73,51 @@ function ValidateCupom($data_cupom, $valor)
         $GLOBALS['codigo_cupom'] = $GLOBALS['codigo_cupom'] . ' - Expirado';
     }
 }
-
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <title>Confirmação de <?= $cliente ?></title>
-</head>
-
-<body>
-        <ul class='list-group mb-3 mt-5'>
-
-            <?php CreateList(); ?>
-            <li class="list-group-item d-flex justify-content-between bg-light">
-                <div class="text-<?= $text_status ?>">
-                    <h6 class="my-0">Cupom de desconto</h6>
-                    <small><?= $codigo_cupom ?></small>
-                </div>
-                <span class="text-<?= $text_status ?>">−R$ <?= $desconto_cupom ?></span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-                <span>Total:</span>
-                <strong>$<?= $total ?></strong>
-            </li>  
-        </ul>
-        <div class="row text-center mt-3">
-            <h2 class="h2 "><?= $cliente ?></h2>
-            <p>Deseja finalizar sua compra ?</p>
-            <a class="w-100 btn btn-success btn-lg" href="./white.php" type="submit">Finalizar</a>
-        </div>
-
-
+<div class="container">
+    <ul class='list-group mb-3 mt-5'>
+        <?php CreateList(); ?>
+        <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-<?= $text_status ?>">
+                <h6 class="my-0">Cupom de desconto</h6>
+                <small><?= $codigo_cupom ?></small>
+            </div>
+            <span id="" class="text-<?= $text_status ?>">−R$ <?= $desconto_cupom ?></span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+            <span>Total:</span>
+            <strong>R$<?= $total ?></strong>
+        </li>
+    </ul>
+    <div class="d-flex justify-content-center row text-center mt-3">
+        <h2 class="h2">Cliente:<?= $cliente ?></h2>
+        <p>Deseja finalizar sua compra ?</p>
+        <a class=" text-white btn btn-success col-lg-5" href="./white.php">Finalizar</a>
     </div>
 
-    <footer class="mb-4 mt-5">
-        <div class="container-fluid">
-            <p class="text-center display-8 mb-1">Código criado e bugado por alguém do grupo B.</p>
 
-            <p class="display-8 text-center"><a href="https://instagram.com/siimon.pao" class="text-decoration-none text-info">☕ Me pague um café ❤</a></p>
+</div>
+<script >
 
-        </div>
-    </footer>
+	function Alter(id_item, comand, a) {
+        let quanti = document.getElementById("quanti"+a)
+        let valortotal = document.getElementById("valortotal"+a)
+       console.log(id_item, comand)
+		let xmlhttp = new XMLHttpRequest()
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				//esse é o código
+                let dados = JSON.parse(this.responseText)
+                console.log(dados);
+                quanti.innerHTML = dados['quantidade_item'] + " Items de: R$  " + dados['valor_produto']
+				let multi = dados['quantidade_item'] * dados['valor_produto']
+                valortotal.innerHTML = " R$  " + parseFloat(multi).toFixed(2)
+                
+			}
+		}
+		xmlhttp.open("GET","../functions/alter_pedidos.php?comand="+comand+"&id="+id_item,true)
+		xmlhttp.send()
+	}
 
-    <script src="../js/bootstrap.min.js"></script>
-</body>
-
-</html>
-
-<!--
-                     .
-                    / V\
-                  / `  /
-                 <<   |
-                 /    |
-               /      |
-             /        |
-           /    \  \ /
-          (      ) | |
-    _______|   _/_  | |
-  <_________\______)\__)
--->
+</script>
+<?php include '../includes/footer.php'; ?>

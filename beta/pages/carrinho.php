@@ -93,9 +93,9 @@ function ValidateCupom($data_cupom, $valor)
         </li>
     </ul>
     <div class="d-flex justify-content-center row text-center mt-3">
-        <h2 class="h2 ">Cliente: <?= $cliente ?></h2>
-        <p>Deseja finalizar sua compra ?</p>
-        <a class=" text-white btn btn-success col-lg-5" href="./check.php">Comprar</a>
+        <h2 class="h2">Cliente:<?= $cliente ?></h2>
+        <p>Deseja prosseguir com a compra ?</p>
+        <a class=" text-white btn btn-success col-lg-5" href="./pagamento.php">Comprar</a>
     </div>
 
 
