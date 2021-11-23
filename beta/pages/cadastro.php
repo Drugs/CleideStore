@@ -78,7 +78,7 @@ include '../includes/header.php';
 
                 </div>
 
-                <button type="submit" class="btn btn-green btn-lg mt-3 mb-4">Registrar</button>
+                <a type="submit" class="btn btn-green btn-lg mt-3 mb-4" href="./login.php">Registrar</a>
             </form>
 
 
