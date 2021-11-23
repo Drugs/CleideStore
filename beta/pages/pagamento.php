@@ -26,14 +26,15 @@ include '../includes/header.php';
         <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
         <label class="form-check-label" for="paypal">PayPal</label>
       </div>
-      <div class="form-check"></div>
+      <div class="form-check">
         <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
         <label class="form-check-label" for="paypal">Boleto</label>
       </div>
     </div>
-
-    <div class="row gy-2">
-      <div class="col-md-6">
+  </div>
+</br>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
         <label for="cc-name" class="form-label">Nome do cartão</label>
         <input type="text" class="form-control" id="cc-name" placeholder="" required>
         <small class="text-muted">Digite o mesmo nome do cartão corretamente</small>
@@ -42,14 +43,13 @@ include '../includes/header.php';
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-4">
         <label for="cc-number" class="form-label">Número do cartão</label>
         <input type="number" class="form-control" id="cc-number" placeholder="" required>
         <div class="invalid-feedback">
           Número do cartão é obrigatório
         </div>
       </div>
-
       <div class="col-sm-1">
         <label for="cc-expiration" class="form-label">Validade</label>
         <input type="number" class="form-control" id="cc-expiration" placeholder="" required>
