@@ -16,6 +16,7 @@ $userName = NameUser();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= CSSFILE ?>css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="<?= CSSFILE ?>images/icons/favicon.png" type="image/x-icon" />
     <title><?= strtoupper(TITLE); ?></title>
 </head>
 

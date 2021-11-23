@@ -11,7 +11,9 @@ include '../includes/header.php';
 ?>
 
 <div class="container">
-
+    <div id="divf">
+        <!--<div class='alert alert-success alert-dismissible fade show' id="alert" role='alert'>Produto adicionado ao carrinho!<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button></div>-->
+    </div>
     <div class="row">
         <!--Imagenszinhas-->
         <div class="col-0 col-sm-0 col-lg-2 d-none d-lg-flex justify-content-center align-content-center">
@@ -43,13 +45,13 @@ include '../includes/header.php';
                 </div>
                 <div class="carousel-inner ">
                     <div class="carousel-item active">
-                        <img src="../images/roupa-2.jpg" class="d-block w-100" alt="Imagem do produto" />
+                        <img src="../images/products/<?= $product['nameBoy'] ?>/roupa-1.png" class="d-block w-100" alt="Imagem do produto" />
                     </div>
                     <div class="carousel-item">
-                        <img src="../images/roupa-2.jpg" class="d-block w-100" alt="Imagem do produto" />
+                        <img src="../images/products/<?= $product['nameBoy'] ?>/roupa-2.png" class="d-block w-100" alt="Imagem do produto" />
                     </div>
                     <div class="carousel-item">
-                        <img src="../images/roupa-2.jpg" class="d-block w-100" alt="Imagem do produto" />
+                        <img src="../images/products/<?= $product['nameBoy'] ?>/roupa-3.png" class="d-block w-100" alt="Imagem do produto" />
                     </div>
                 </div>
             </div>
@@ -111,10 +113,12 @@ include '../includes/header.php';
 
                 <!--Botão de comprar e favorito-->
                 <div class="row m-auto mt-3 container-plus align-items-center">
-                    <button class="col col-sm btn btn-green">Comprar</button>
+                    <button onclick="AjaxAdd(<?= $product['id_produto'] ?>)" class="col col-sm btn btn-green">Comprar</button>
                     <div class="col-3 col-sm-2 ms-4">
                         <button class=" btn btn-rounded-lg align-items-center shadow-clear">
-                            <img src="../images/icons/shop_cart.svg" alt="Icone de carrinho">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+                            </svg>
                         </button>
                     </div>
                 </div>
@@ -127,6 +131,27 @@ include '../includes/header.php';
     function changeImage(element) {
         var main_prodcut_image = document.getElementById("main_product_image");
         main_prodcut_image.src = element.src;
+    }
+
+    function AjaxAdd(id) {
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let divF = document.getElementById("divf");
+                console.log(this.responseText);
+                if (this.responseText == "success") {
+                    divF.innerHTML = "<div class='alert alert-success alert-dismissible fade show' id='alert' role='alert'>Produto adicionado ao carrinho!<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button></div>"
+
+                } else {
+                    divF.innerHTML = "<div class='alert alert-danger alert-dismissible fade show' id='alert' role='alert'>Precisa estar logado para comprar!<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'> </button></div>"
+                }
+
+                deleteAlert();
+            }
+        }
+        xmlhttp.open("GET", "../functions/addtocar.php?id=" + id, true);
+        xmlhttp.send();
+
     }
 </script>
 <?php include '../includes/footer.php'; ?>

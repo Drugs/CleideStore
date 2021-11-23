@@ -50,20 +50,14 @@ include 'includes/header.php';
 
 </section>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        setTimeout(function() {
-            $("#alert").fadeOut("slow", function() {
-                $(this).alert('close');
-            });
-        }, 4000);
-    });
-</script>
+
 
 <?php
 include 'includes/footer.php';
 ?>
-
+<script>
+    deleteAlert();
+</script>
 
 
 

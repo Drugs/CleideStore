@@ -14,6 +14,17 @@
 
 <!-- bootstrap js -->
 <script src="<?= CSSFILE ?>js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function deleteAlert() {
+        $(document).ready(function() {
+            setTimeout(function() {
+                $("#alert").fadeOut("slow", function() {
+                    $(this).alert('close');
+                });
+            }, 4000);
+        });
+    }
+</script>
 
 </body>
 
