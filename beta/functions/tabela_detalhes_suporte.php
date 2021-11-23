@@ -6,7 +6,7 @@ if ($teste == NULL) {
     echo "
     <div class='container'>
      <div class= 'row d-flex justify-content-center'>
-      <div class='col-sm-4'>
+      <div class='col-sm-12 col-md-4'>
      <h3 class= 'mb-3'>Informações do Cliente:</h3>
     <ul class='list-group'>
   <li class='list-group-item d-flex'>
@@ -42,7 +42,7 @@ if ($teste == NULL) {
   </ul>
      </div>
 
-     <div class='col-4'>
+     <div class='col-sm-12 col-md-4'>
      <h3 class= 'mb-3'>Informações do Suporte:</h3>
     <ul class='list-group'>
   <li class='list-group-item d-flex'>
@@ -90,7 +90,7 @@ if ($teste == NULL) {
       echo "
       <div class='container'>
      <div class= 'row d-flex justify-content-center'>
-      <div class='col-sm-4'>
+      <div class='col-sm-12 col-md-4'>
      <h3 class= 'mb-3'>Informações do Cliente:</h3>
     <ul class='list-group'>
   <li class='list-group-item d-flex'>
@@ -126,7 +126,7 @@ if ($teste == NULL) {
   </ul>
      </div>
  
-     <div class='col-sm-4'>
+     <div class='col-sm-12 col-md-4'>
      <h3 class= 'mb-3'>Informações do Produto:</h3>
     <ul class='list-group'>
   <li class='list-group-item d-flex'>
@@ -163,7 +163,7 @@ if ($teste == NULL) {
   </ul>
      </div>
 
-     <div class='col-4'>
+     <div class='col-sm-12 col-md-4'>
      <h3 class= 'mb-3'>Informações do Suporte:</h3>
     <ul class='list-group'>
   <li class='list-group-item d-flex'>
@@ -200,7 +200,7 @@ if ($teste == NULL) {
      </div>
      
      
-     <div class='col-sm-4 mb-5 mt-4'>
+     <div class='col-sm-12 col-md-4 mb-5 mt-4'>
      <h3 class='mb-3'>Informações do Pedido:</h3>
     <ul class='list-group'>
   <li class='list-group-item d-flex'>

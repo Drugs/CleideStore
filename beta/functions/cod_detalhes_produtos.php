@@ -7,7 +7,7 @@ $dados = mysqli_fetch_assoc($resultado);
 $row = $dados;
 
 echo "
-<div class='col-sm-4'>
+<div class='col-sm-12 col-md-4'>
 <h3 class= 'mb-4'>Informações do Produto:</h3>
 <ul class='list-group'>
 <li class='list-group-item d-flex'>
@@ -44,10 +44,9 @@ echo "
 </ul>
 </div>
 
-    <div class= '  mt-5 d-flex justify-content-center'>
-      <a class='btn btn-yellow' href='form_att_produto.php?id={$row['id_produto']}'>Editar</a>
-    <div class= 'col-lg-3'> 
-    </div>
+    <div class= 'mt-5 d-flex justify-content-center'>
+      <a class='me-5 btn btn-yellow' href='form_att_produto.php?id={$row['id_produto']}'>Editar</a>
+  
   
 <button type='button' class='btn btn-pink' data-bs-toggle='modal' data-bs-target='#rapadura'>
 Deletar

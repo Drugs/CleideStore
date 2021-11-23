@@ -7,7 +7,7 @@ $a = 0;
 while ($resultado = mysqli_fetch_assoc($busca) and $a < 30){
     $row [] = $resultado; 
     echo "
-    <div id='card'class='card mx-1 col-sm-3 mb-3 p-0'>
+    <div id='card' class='card mx-1 col-sm-12 col-md-4 mb-3 p-0'>
     <div class='card-header'>{$row[$a]["nome_produto"]}</div>
     <div class='card-body'>
     <p class='card-text'>

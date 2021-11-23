@@ -18,7 +18,7 @@ while ($dados = mysqli_fetch_array($resultado)) {
 while ($a < $itens){
 echo "
     
-<div id='card'class='card mx-1 col-sm-3 mb-3 p-0'>
+<div id='card'class='card mx-1 col-sm-12 col-md-4 mb-3 p-0'>
 <div class='card-header'>{$row[$a]["nome_cliente"]}</div>
 <div class='card-body'>
  <p class='card-text'>

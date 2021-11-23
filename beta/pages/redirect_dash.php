@@ -11,14 +11,14 @@ include "../includes/header_dash_p.php";
   </div>
 
       <div class= "container">
-        <div class= "row d-flex justify-content-center">
-          <div class= ' offset-md-1 col-sm-2'>
+        <div class= "row d-flex  justify-content-center">
+          <div class= 'offset-md-1 mb-3 col-sm-2'>
             <a class= 'btn btn-green' href='index_suporte.php'> Suporte </a>
           </div>
-          <div class= 'col-sm-2'>
+          <div class= 'mb-3 col-sm-2'>
             <a class= 'btn btn-green' href='index_clientes.php'> Clientes </a>
           </div>
-          <div class= 'col-sm-2'>
+          <div class= 'mb-3 col-sm-2'>
           <a class= 'btn btn-green' href='index_produtos.php'> Produtos</a>
         </div>
         <div class= 'mb-5 col-sm-2'>

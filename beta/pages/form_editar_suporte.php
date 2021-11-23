@@ -56,7 +56,7 @@ $dados = mysqli_fetch_assoc($resultado);
             
           
          
-          <hr class="my-4 col-lg-12">
+          <hr class="my-4 col-sm-4 col-md-4">
           <div class= "row justify-content-center">
             <button class="w-100 btn btn-primary btn-lg btn-green" type="submit">Atualizar</button>
           </div>

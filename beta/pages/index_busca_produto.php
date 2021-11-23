@@ -1,8 +1,3 @@
-<style> 
-#card {
-  width: 22%;
-}
-</style>
 <?php
 
 Define ('TITLE' , 'Resultados da busca');

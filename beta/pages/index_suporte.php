@@ -10,14 +10,6 @@ JOIN cliente on cliente.id_cliente = suporte.fk_id_cliente WHERE 1";
 $consulta = mysqli_query($connection, $query);
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<style> 
-#card {
-  width: 22%;
-}
-</style>
-<body>
 <div class="container">
   <div class="mb-5 mt-4">
 
@@ -35,8 +27,7 @@ $consulta = mysqli_query($connection, $query);
     <?php 
     echo
     "
-     
-        <div id='card'class='card mx-1 col-sm-3 mb-3 p-0'>
+        <div id='card'class='card mx-1 col-sm-12 col-md-4 mb-3 p-0'>
            <div class='card-header'>{$dado["nome_cliente"]}</div>
           <div class='card-body'>
             <p class='card-text'>
@@ -62,5 +53,3 @@ $consulta = mysqli_query($connection, $query);
 </div>
 <?php include "../includes/footer_dash.php";?>
  
-</body>
-</html>

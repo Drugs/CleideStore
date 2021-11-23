@@ -4,15 +4,6 @@ Define('CSSFILE' , '../');
 include "../includes/header_dash_p.php";
  ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<style> 
-#card {
-  width: 22%;
-}
-</style>
-
-<body>
   <div class="container m-auto">
     <div class="mb-5 mt-4">
     
@@ -44,6 +35,3 @@ include "../includes/header_dash_p.php";
 </div>
 <?php include "../includes/footer_dash.php"; ?>
   <script src="bootstrap.min.js"></script>
-</body>
-
-</html>
